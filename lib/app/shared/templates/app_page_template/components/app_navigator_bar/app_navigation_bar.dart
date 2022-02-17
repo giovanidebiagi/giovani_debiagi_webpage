@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:giovani_debiagi_webpage/app/routes/app_routes.dart';
+import '../../app_navigation_bloc.dart';
 import '../../../../constants/app_theme.dart';
 import 'app_navigation_bar_page_button.dart';
 
 class AppNavigationBar extends StatelessWidget {
-  const AppNavigationBar({Key? key}) : super(key: key);
+  const AppNavigationBar({required this.navigationBloc, Key? key}) : super(key: key);
+
+  final AppNavigationBloc navigationBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +21,22 @@ class AppNavigationBar extends StatelessWidget {
         children: [
           Flexible(
             flex: 2,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: AppRoutes.appRoutesHashMap.length,
-              itemBuilder: (context, index) {
-                return AppNavigationBarPageButton(
-                  title: AppRoutes.appRoutesHashMap.keys.elementAt(index),
-                );
-              },
-            ),
+            child: StreamBuilder<Object>(
+                stream: navigationBloc.currentInnerRouteStream,
+                builder: (context, snapshot) {
+                  return ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: AppRoutes.appRoutesHashMap.length,
+                    itemBuilder: (context, index) {
+                      return AppNavigationBarPageButton(
+                        title: AppRoutes.appRoutesHashMap.keys.elementAt(index),
+                        navigationBloc: navigationBloc,
+                        isCurrentRoute:
+                            snapshot.data == AppRoutes.appRoutesHashMap.values.elementAt(index),
+                      );
+                    },
+                  );
+                }),
           ),
           Flexible(
             flex: 1,
