@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:giovani_debiagi_webpage/app/routes/app_routes.dart';
 import 'package:giovani_debiagi_webpage/app/shared/constants/app_theme.dart';
 
-import '../../app_navigation_bloc.dart';
+import '../../../../../app_navigation_bloc.dart';
 
-class AppNavigationBarPageButton extends StatelessWidget {
-  const AppNavigationBarPageButton(
+class AppNavigationBarNavigationButton extends StatelessWidget {
+  const AppNavigationBarNavigationButton(
       {required this.isCurrentRoute, required this.navigationBloc, required this.title, Key? key})
       : super(key: key);
 
