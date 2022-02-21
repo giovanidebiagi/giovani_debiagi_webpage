@@ -3,12 +3,12 @@ import 'package:giovani_debiagi_webpage/app/modules/flutter_projects/flutter_pro
 import 'package:giovani_debiagi_webpage/app/modules/home/home_page.dart';
 import 'package:giovani_debiagi_webpage/app/modules/mechatronics_projects/mechatronics_projects_page.dart';
 import 'package:giovani_debiagi_webpage/app/shared/templates/app_page_template/app_navigation_bloc.dart';
-import 'components/app_navigator_bar/app_navigation_bar.dart';
+import 'components/app_navigation_bar/app_navigation_bar.dart';
 
 class AppPageTemplate extends StatelessWidget {
-  const AppPageTemplate({required this.navigationBloc, Key? key}) : super(key: key);
+  const AppPageTemplate({required this.appNavigationBloc, Key? key}) : super(key: key);
 
-  final AppNavigationBloc navigationBloc;
+  final AppNavigationBloc appNavigationBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +16,12 @@ class AppPageTemplate extends StatelessWidget {
       body: Column(
         children: [
           AppNavigationBar(
-            navigationBloc: navigationBloc,
+            appNavigationBloc: appNavigationBloc,
           ),
           SizedBox(
             height: 500,
             child: Navigator(
-              key: navigationBloc.innerNavigatorKey,
+              key: appNavigationBloc.innerNavigatorKey,
               onGenerateRoute: (settings) {
                 return PageRouteBuilder(
                   transitionDuration: Duration.zero,
