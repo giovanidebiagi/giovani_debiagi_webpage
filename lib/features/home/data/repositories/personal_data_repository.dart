@@ -26,8 +26,15 @@ class PersonalDataRepository implements IPersonalDataRepository {
   }
 
   @override
-  Future<Either<IFailure, List<Skill>>> getSkills() {
-    // TODO: implement getSkills
-    throw UnimplementedError();
+  Future<Either<IFailure, List<Skill>>> getSkills() async {
+    List<Skill> _skills;
+
+    try {
+      _skills = await personalDataLocalDatasource.getSkills();
+    } on CacheException {
+      return Left(CacheFailure());
+    }
+
+    return Right(_skills);
   }
 }

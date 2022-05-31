@@ -1,10 +1,14 @@
-import 'package:flutter/material.dart';
+import 'package:equatable/equatable.dart';
 
-class Skill {
-  String name;
-  Image icon;
-  Skill({
+class Skill extends Equatable {
+  final String name;
+  final String skillIconAssetPath;
+
+  const Skill({
     required this.name,
-    required this.icon,
+    required this.skillIconAssetPath,
   });
+
+  @override
+  List<Object?> get props => [name, skillIconAssetPath];
 }
