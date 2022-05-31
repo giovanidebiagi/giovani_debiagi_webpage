@@ -1,7 +1,8 @@
 import 'package:giovani_debiagi_webpage/features/home/domain/entities/personal_info.dart';
+import 'package:giovani_debiagi_webpage/features/home/domain/entities/skill.dart';
 
 abstract class IPersonalDataLocalDatasource {
-  /// Gets PersonalInfo
-  /// Throws [CacheException] if no personal info is found
   Future<PersonalInfo> getPersonalInfo();
+
+  Future<List<Skill>> getSkills();
 }
