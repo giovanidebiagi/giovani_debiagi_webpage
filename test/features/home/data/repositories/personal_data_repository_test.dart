@@ -28,14 +28,15 @@ void main() {
         () async {
       // arrange
       const _personalInfo = PersonalInfo(
-        name: PERSONAL_INFO_NAME,
-        lastName: PERSONAL_INFO_LAST_NAME,
-        email: PERSONAL_INFO_EMAIL,
-        about: PERSONAL_INFO_ABOUT,
-        gitHubUrl: PERSONAL_INFO_GIT_HUB_URL,
-        linkedInUrl: PERSONAL_INFO_LINKED_IN_URL,
-        youTubeUrl: PERSONAL_YOU_TUBE_URL,
-        profilePictureAssetPath: PERSONAL_INFO_PROFILE_PICTURE_PATH,
+        name: PersonalInfoConstants.personalInfoName,
+        lastName: PersonalInfoConstants.personalInfoLastName,
+        email: PersonalInfoConstants.personalInfoEmail,
+        about: PersonalInfoConstants.personalInfoAboutMeDescription,
+        gitHubUrl: PersonalInfoConstants.personalInfoGitHubUrl,
+        linkedInUrl: PersonalInfoConstants.personalInfoLinkedInUrl,
+        youTubeUrl: PersonalInfoConstants.personalYouTubeUrl,
+        profilePictureAssetPath:
+            PersonalInfoConstants.personalInfoProfilePicturePath,
       );
 
       when(() => _mockPersonalDataLocalDatasource.getPersonalInfo())
@@ -70,7 +71,7 @@ void main() {
       // arrange
       List<Skill> _skills = [];
 
-      SKILLS.forEach(
+      PersonalInfoConstants.skills.forEach(
           (k, v) => _skills.add(Skill(name: k, skillIconAssetPath: v)));
       when(() => _mockPersonalDataLocalDatasource.getSkills())
           .thenAnswer((invocation) async => _skills);
