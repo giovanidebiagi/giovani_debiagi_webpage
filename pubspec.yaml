@@ -37,6 +37,8 @@ dependencies:
   dartz: ^0.10.1
   mocktail: ^0.3.0
   equatable: ^2.0.3
+  google_fonts: ^3.0.1
+  url_launcher: ^6.1.2
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +64,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/features/home/data/assets/images/giovani.png
+    - lib/features/home/data/assets/images/giovani_profile_picture.png
+    - lib/features/home/data/assets/images/profession_images/mechatronics_engineer.png
+    - lib/features/home/data/assets/images/profession_images/flutter_developer.png
+    - lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png
+    - lib/features/home/data/assets/images/social_media_icons/github_icon.png
+    - lib/features/home/data/assets/images/social_media_icons/youtube_icon.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
