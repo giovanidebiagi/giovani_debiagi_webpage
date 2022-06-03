@@ -18,13 +18,15 @@ I love multidisciplinary solutions and outside-the-box thinking.''';
       'lib/features/home/data/assets/images/giovani.png';
 
   static const Map skills = {
-    'Flutter': 'lib/features/home/data/assets/images/skills/flutter.png',
-    'Firebase': 'lib/features/home/data/assets/images/skills/firebase.png',
-    'Git': 'lib/features/home/data/assets/images/skills/git.png',
+    'Flutter': 'lib/features/home/data/assets/images/skills_icons/flutter.png',
+    'Firebase':
+        'lib/features/home/data/assets/images/skills_icons/firebase.png',
+    'Git': 'lib/features/home/data/assets/images/skills_icons/git.png',
     'Google Apps Script':
-        'lib/features/home/data/assets/images/skills/google_apps_script.png',
-    'Arduino': 'lib/features/home/data/assets/images/skills/arduino.png',
-    'ROS': 'lib/features/home/data/assets/images/skills/ros.png',
-    'SolidWorks': 'lib/features/home/data/assets/images/skills/solid_works.png',
+        'lib/features/home/data/assets/images/skills_icons/google_apps_script.png',
+    'Arduino': 'lib/features/home/data/assets/images/skills_icons/arduino.png',
+    'ROS': 'lib/features/home/data/assets/images/skills_icons/ros.png',
+    'SolidWorks':
+        'lib/features/home/data/assets/images/skills_icons/solid_works.png',
   };
 }

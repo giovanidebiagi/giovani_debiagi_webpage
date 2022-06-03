@@ -40,6 +40,7 @@ dependencies:
   google_fonts: ^3.0.1
   url_launcher: ^6.1.2
   flutter_bloc: ^8.0.1
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,14 @@ flutter:
     - lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png
     - lib/features/home/data/assets/images/social_media_icons/github_icon.png
     - lib/features/home/data/assets/images/social_media_icons/youtube_icon.png
+    - lib/features/home/data/assets/images/skills_icons/flutter.png
+    - lib/features/home/data/assets/images/skills_icons/firebase.png
+    - lib/features/home/data/assets/images/skills_icons/git.png
+    - lib/features/home/data/assets/images/skills_icons/google_apps_script.png
+    - lib/features/home/data/assets/images/skills_icons/arduino.png
+    - lib/features/home/data/assets/images/skills_icons/ros.png
+    - lib/features/home/data/assets/images/skills_icons/solid_works.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
