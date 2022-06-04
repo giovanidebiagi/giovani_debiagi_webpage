@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
+
+import '../../../../../../../../../core/app_colors.dart';
 
 class ProfessionWidget extends StatelessWidget {
   const ProfessionWidget(this.imagePath, this.name, {Key? key})

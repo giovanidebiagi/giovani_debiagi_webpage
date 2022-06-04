@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'profession_widget.dart';
 
 class ProfessionsWidget extends StatelessWidget {

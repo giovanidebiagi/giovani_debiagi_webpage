@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/i_skills_state.dart';
+
+import 'i_skills_state.dart';
 
 class LoadingSkillsState extends Equatable implements ISkillState {
   @override

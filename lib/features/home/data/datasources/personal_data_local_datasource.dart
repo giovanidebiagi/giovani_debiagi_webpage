@@ -1,8 +1,8 @@
-import 'package:giovani_debiagi_webpage/core/errors/exceptions/cache_exception.dart';
-import 'package:giovani_debiagi_webpage/features/home/data/datasources/i_personal_data_local_datasource.dart';
-import 'package:giovani_debiagi_webpage/features/home/data/personal_info_constants.dart';
-import 'package:giovani_debiagi_webpage/features/home/domain/entities/personal_info.dart';
-import 'package:giovani_debiagi_webpage/features/home/domain/entities/skill.dart';
+import '../../../../core/errors/exceptions/cache_exception.dart';
+import 'i_personal_data_local_datasource.dart';
+import '../personal_info_constants.dart';
+import '../../domain/entities/personal_info.dart';
+import '../../domain/entities/skill.dart';
 
 class PersonalDataLocalDatasource implements IPersonalDataLocalDatasource {
   @override

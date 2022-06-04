@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/size_constants.dart';
+import '../../../../../../core/size_constants.dart';
 
 class HomePageSectionTemplate extends StatelessWidget {
-  const HomePageSectionTemplate({Key? key, required this.child, required this.color})
+  const HomePageSectionTemplate(
+      {Key? key, required this.child, required this.color})
       : super(key: key);
 
   final Widget child;

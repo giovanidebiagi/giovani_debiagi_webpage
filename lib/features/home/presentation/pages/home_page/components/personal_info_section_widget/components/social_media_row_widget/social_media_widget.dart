@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../../../../../../../../../core/app_colors.dart';
 
 class SocialMediaWidget extends StatelessWidget {
   const SocialMediaWidget(

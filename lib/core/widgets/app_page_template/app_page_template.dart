@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
+
+import '../../app_colors.dart';
 
 class AppPageTemplate extends StatelessWidget {
   const AppPageTemplate({Key? key, required this.body}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
-import 'package:giovani_debiagi_webpage/core/size_constants.dart';
+import '../../../../../../../core/app_colors.dart';
+import '../../../../../../../core/size_constants.dart';
 import '../../../../../data/personal_info_constants.dart';
-import '../../widget_templates/home_page_section_widget.dart';
+import '../../home_page_widget_templates/home_page_section_widget.dart';
 import 'components/about_me_widget.dart';
 import 'components/professions_widget/professions_widget.dart';
 import 'components/social_media_row_widget/social_media_row_widget.dart';

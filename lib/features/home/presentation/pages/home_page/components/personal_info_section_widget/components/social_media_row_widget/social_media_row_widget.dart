@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../../../data/personal_info_constants.dart';
 import 'social_media_widget.dart';
 
@@ -11,17 +12,20 @@ class SocialMediaRowWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: const [
         SocialMediaWidget(
-          imagePath: 'lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png',
+          imagePath:
+              'lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png',
           url: PersonalInfoConstants.personalInfoLinkedInUrl,
         ),
         SizedBox(width: 32.0),
         SocialMediaWidget(
-          imagePath: 'lib/features/home/data/assets/images/social_media_icons/github_icon.png',
+          imagePath:
+              'lib/features/home/data/assets/images/social_media_icons/github_icon.png',
           url: PersonalInfoConstants.personalInfoGitHubUrl,
         ),
         SizedBox(width: 32.0),
         SocialMediaWidget(
-          imagePath: 'lib/features/home/data/assets/images/social_media_icons/youtube_icon.png',
+          imagePath:
+              'lib/features/home/data/assets/images/social_media_icons/youtube_icon.png',
           url: PersonalInfoConstants.personalYouTubeUrl,
         ),
       ],

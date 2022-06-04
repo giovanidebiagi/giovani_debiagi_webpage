@@ -1,11 +1,11 @@
-import 'package:giovani_debiagi_webpage/core/errors/exceptions/cache_exception.dart';
-import 'package:giovani_debiagi_webpage/core/errors/failures/cache_failure.dart';
-import 'package:giovani_debiagi_webpage/features/home/data/datasources/i_personal_data_local_datasource.dart';
-import 'package:giovani_debiagi_webpage/features/home/domain/entities/skill.dart';
-import 'package:giovani_debiagi_webpage/features/home/domain/entities/personal_info.dart';
-import 'package:giovani_debiagi_webpage/core/errors/failures/i_failure.dart';
+import '../../../../core/errors/exceptions/cache_exception.dart';
+import '../../../../core/errors/failures/cache_failure.dart';
+import '../datasources/i_personal_data_local_datasource.dart';
+import '../../domain/entities/skill.dart';
+import '../../domain/entities/personal_info.dart';
+import '../../../../core/errors/failures/i_failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:giovani_debiagi_webpage/features/home/domain/repositories/i_personal_data_repository.dart';
+import '../../domain/repositories/i_personal_data_repository.dart';
 
 class PersonalDataRepository implements IPersonalDataRepository {
   final IPersonalDataLocalDatasource personalDataLocalDatasource;

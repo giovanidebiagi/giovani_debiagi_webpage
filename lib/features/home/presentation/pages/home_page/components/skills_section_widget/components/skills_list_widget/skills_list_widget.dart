@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:giovani_debiagi_webpage/core/injection_container.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/get_skills_bloc.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_events/get_skills_event.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/empty_skills_state.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/i_skills_state.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/loaded_skills_state.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/loading_skills_state.dart';
+import '../../../../../../../../../core/injection_container.dart';
+import '../../../../../../blocs/get_skills_bloc.dart';
+import '../../../../../../blocs/skills_events/get_skills_event.dart';
+import '../../../../../../blocs/skills_states/empty_skills_state.dart';
+import '../../../../../../blocs/skills_states/i_skills_state.dart';
+import '../../../../../../blocs/skills_states/loaded_skills_state.dart';
+import '../../../../../../blocs/skills_states/loading_skills_state.dart';
 
 import 'components/skill_widget.dart';
 
