@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/pages/components/personal_info_widget/components/professions_widget/profession_widget.dart';
+import 'profession_widget.dart';
 
 class ProfessionsWidget extends StatelessWidget {
   const ProfessionsWidget({Key? key}) : super(key: key);

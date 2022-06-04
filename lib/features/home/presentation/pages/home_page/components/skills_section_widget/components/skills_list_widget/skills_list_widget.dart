@@ -7,7 +7,8 @@ import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_
 import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/i_skills_state.dart';
 import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/loaded_skills_state.dart';
 import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/loading_skills_state.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/pages/components/skills_widget/components/skills_list_widget/components/skill_widget.dart';
+
+import 'components/skill_widget.dart';
 
 class SkillsListWidget extends StatefulWidget {
   const SkillsListWidget({Key? key}) : super(key: key);
@@ -39,17 +40,22 @@ class _SkillsListWidgetState extends State<SkillsListWidget> {
           } else if (state is LoadingSkillsState) {
             return const CircularProgressIndicator();
           } else if (state is LoadedSkillsState) {
-            return Wrap(
-              children: state.skills
-                  .map((skill) => Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12.0, vertical: 12.0),
+            return SizedBox(
+              width: double.infinity,
+              child: Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                children: state.skills
+                    .map(
+                      (skill) => Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 6.0),
                         child: SkillWidget(
                           imagePath: skill.skillIconAssetPath,
                           name: skill.name,
                         ),
-                      ))
-                  .toList(),
+                      ),
+                    )
+                    .toList(),
+              ),
             );
           }
           return Container();
