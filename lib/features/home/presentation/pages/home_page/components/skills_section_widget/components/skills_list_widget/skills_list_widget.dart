@@ -43,7 +43,7 @@ class _SkillsListWidgetState extends State<SkillsListWidget> {
             return SizedBox(
               width: double.infinity,
               child: Wrap(
-                alignment: WrapAlignment.spaceBetween,
+                spacing: 12.0,
                 children: state.skills
                     .map(
                       (skill) => Padding(
