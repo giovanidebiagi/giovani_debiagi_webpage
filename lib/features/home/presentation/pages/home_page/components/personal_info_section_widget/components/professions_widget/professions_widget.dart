@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:giovani_debiagi_webpage/features/home/data/personal_info_constants.dart';
 
 import 'profession_widget.dart';
 
@@ -10,13 +11,13 @@ class ProfessionsWidget extends StatelessWidget {
     return Row(
       children: const [
         ProfessionWidget(
-          'lib/features/home/data/assets/images/profession_images/mechatronics_engineer.png',
+          PersonalInfoConstants.mechatronicsImagePath,
           '''Mechatronics
 Engineer''',
         ),
         SizedBox(width: 24.0),
         ProfessionWidget(
-          'lib/features/home/data/assets/images/profession_images/flutter_developer.png',
+          PersonalInfoConstants.flutterImagePath,
           '''Flutter
 Developer''',
         ),

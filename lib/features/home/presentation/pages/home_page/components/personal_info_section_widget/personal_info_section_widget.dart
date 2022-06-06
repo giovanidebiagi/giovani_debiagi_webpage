@@ -12,7 +12,7 @@ class PersonalInfoSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePageSectionTemplate(
+    return HomePageSectionWidget(
       color: AppColors.pagePrimaryBackgroundColor,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,7 +24,7 @@ class PersonalInfoSectionWidget extends StatelessWidget {
               children: const [
                 CircleAvatar(
                   backgroundImage: AssetImage(
-                      'lib/features/home/data/assets/images/giovani_profile_picture.png'),
+                      PersonalInfoConstants.personalInfoProfilePicturePath),
                   radius: SizeConstants.profilePictureAvatarRadius,
                 ),
                 SizedBox(height: 32.0),

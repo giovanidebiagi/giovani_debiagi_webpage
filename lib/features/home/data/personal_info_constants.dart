@@ -15,10 +15,15 @@ I love multidisciplinary solutions and outside-the-box thinking.''';
   static const String personalYouTubeUrl =
       'https://www.youtube.com/channel/UCAISIrZZ8WtSss2efxv2Jjg';
   static const String personalInfoProfilePicturePath =
-      'lib/features/home/data/assets/images/giovani.png';
+      'lib/features/home/data/assets/images/giovani_profile_picture.png';
+
+  static const String mechatronicsImagePath =
+      'lib/features/home/data/assets/images/profession_images/mechatronics_engineer.png';
+  static const String flutterImagePath =
+      'lib/features/home/data/assets/images/skills_icons/flutter.png';
 
   static const Map skills = {
-    'Flutter': 'lib/features/home/data/assets/images/skills_icons/flutter.png',
+    'Flutter': flutterImagePath,
     'Firebase':
         'lib/features/home/data/assets/images/skills_icons/firebase.png',
     'Git': 'lib/features/home/data/assets/images/skills_icons/git.png',
@@ -28,5 +33,14 @@ I love multidisciplinary solutions and outside-the-box thinking.''';
     'ROS': 'lib/features/home/data/assets/images/skills_icons/ros.png',
     'SolidWorks':
         'lib/features/home/data/assets/images/skills_icons/solid_works.png',
+  };
+
+  static const Map socialMedia = {
+    'LinkedIn':
+        'lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png',
+    'GitHub':
+        'lib/features/home/data/assets/images/social_media_icons/github_icon.png',
+    'YouTube':
+        'lib/features/home/data/assets/images/social_media_icons/youtube_icon.png',
   };
 }

@@ -10,10 +10,9 @@ class SkillsSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePageSectionTemplate(
+    return HomePageSectionWidget(
       color: AppColors.pageSecondaryBackgroundColor,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: const [
           Text(
             'Skills',

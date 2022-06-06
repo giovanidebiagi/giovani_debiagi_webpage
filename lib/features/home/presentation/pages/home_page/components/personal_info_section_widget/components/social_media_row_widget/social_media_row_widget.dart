@@ -10,22 +10,19 @@ class SocialMediaRowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
+      children: [
         SocialMediaWidget(
-          imagePath:
-              'lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png',
+          imagePath: PersonalInfoConstants.socialMedia['LinkedIn'],
           url: PersonalInfoConstants.personalInfoLinkedInUrl,
         ),
-        SizedBox(width: 32.0),
+        const SizedBox(width: 32.0),
         SocialMediaWidget(
-          imagePath:
-              'lib/features/home/data/assets/images/social_media_icons/github_icon.png',
+          imagePath: PersonalInfoConstants.socialMedia['GitHub'],
           url: PersonalInfoConstants.personalInfoGitHubUrl,
         ),
-        SizedBox(width: 32.0),
+        const SizedBox(width: 32.0),
         SocialMediaWidget(
-          imagePath:
-              'lib/features/home/data/assets/images/social_media_icons/youtube_icon.png',
+          imagePath: PersonalInfoConstants.socialMedia['YouTube'],
           url: PersonalInfoConstants.personalYouTubeUrl,
         ),
       ],

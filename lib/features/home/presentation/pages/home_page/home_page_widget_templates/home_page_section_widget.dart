@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../../../../core/size_constants.dart';
 
-class HomePageSectionTemplate extends StatelessWidget {
-  const HomePageSectionTemplate(
+class HomePageSectionWidget extends StatelessWidget {
+  const HomePageSectionWidget(
       {Key? key, required this.child, required this.color})
       : super(key: key);
 
@@ -16,14 +16,17 @@ class HomePageSectionTemplate extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
-          SizedBox(
-            width: 800.0,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                top: SizeConstants.defaultSectionInnerTopPadding,
-                bottom: SizeConstants.defaultSectionInnerBottomPadding,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: SizedBox(
+              width: 800.0,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: SizeConstants.defaultSectionInnerTopPadding,
+                  bottom: SizeConstants.defaultSectionInnerBottomPadding,
+                ),
+                child: child,
               ),
-              child: child,
             ),
           ),
         ],
