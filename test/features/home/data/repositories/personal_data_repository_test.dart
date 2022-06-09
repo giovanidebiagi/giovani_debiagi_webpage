@@ -7,6 +7,7 @@ import 'package:giovani_debiagi_webpage/features/home/data/personal_info_constan
 import 'package:giovani_debiagi_webpage/features/home/data/repositories/personal_data_repository.dart';
 import 'package:giovani_debiagi_webpage/features/home/domain/entities/personal_info.dart';
 import 'package:giovani_debiagi_webpage/features/home/domain/entities/skill.dart';
+import 'package:giovani_debiagi_webpage/features/home/domain/repositories/i_personal_data_repository.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockPersonalDataLocalDatasource extends Mock
@@ -14,7 +15,7 @@ class MockPersonalDataLocalDatasource extends Mock
 
 void main() {
   late MockPersonalDataLocalDatasource _mockPersonalDataLocalDatasource;
-  late PersonalDataRepository _personalDataRepository;
+  late IPersonalDataRepository _personalDataRepository;
 
   setUp(() {
     _mockPersonalDataLocalDatasource = MockPersonalDataLocalDatasource();
@@ -46,6 +47,7 @@ void main() {
       final _result = await _personalDataRepository.getPersonalInfo();
 
       // assert
+      verify(() => _mockPersonalDataLocalDatasource.getPersonalInfo());
       expect(_result, const Right(_personalInfo));
     });
 
@@ -60,6 +62,7 @@ void main() {
       final _result = await _personalDataRepository.getPersonalInfo();
 
       // assert
+      verify(() => _mockPersonalDataLocalDatasource.getPersonalInfo());
       expect(_result, Left(CacheFailure()));
     });
   });
@@ -80,6 +83,7 @@ void main() {
       final _result = await _personalDataRepository.getSkills();
 
       // assert
+      verify(() => _mockPersonalDataLocalDatasource.getSkills());
       expect(_result, Right(_skills));
     });
 
@@ -93,6 +97,7 @@ void main() {
       final _result = await _personalDataRepository.getSkills();
 
       // assert
+      verify(() => _mockPersonalDataLocalDatasource.getSkills());
       expect(_result, Left(CacheFailure()));
     });
   });
