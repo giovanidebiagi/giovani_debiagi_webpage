@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Fluter App Test 1",
+        "description": "This app was developed for an engineering company based in Brazil.\\nIt allows company’s clients to access data and documents related to their contracted services.\\nIt also provides a tax simulator.",
+        "projectImagesPaths": [
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_1",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_2",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_3",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_4",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_5",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_6",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image_7",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_1/image8_"
+        ]
+    },
+    {
+        "name": "Fluter App Test 2",
+        "description": "This app was developed for an engineering company based in Brazil.\\nIt allowed recently hired company’s employees to be guided to perform their jobs in the most secure and efficient way.",
+        "projectImagesPaths": [
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_1",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_2",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_3",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_4",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_5",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_6",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image_7",
+            "lib/features/flutter_projects/data/assets/flutter_projects/project_2/image8_"
+        ]
+    }
+]
