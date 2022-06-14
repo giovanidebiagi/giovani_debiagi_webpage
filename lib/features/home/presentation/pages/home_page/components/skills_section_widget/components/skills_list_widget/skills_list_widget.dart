@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:giovani_debiagi_webpage/features/home/presentation/blocs/skills_states/error_skills_state.dart';
 import '../../../../../../../../../core/injection_container.dart';
 import '../../../../../../blocs/get_skills_bloc.dart';
 import '../../../../../../blocs/skills_events/get_skills_event.dart';
@@ -35,8 +36,8 @@ class _SkillsListWidgetState extends State<SkillsListWidget> {
         builder: (context, state) {
           if (state is EmptySkillsState) {
             return const Text('No skills registered.');
-          } else if (state is Error) {
-            return const Text('There has been an error on getting skills.');
+          } else if (state is ErrorSkillsState) {
+            return const Text('There has been an error on getting Skills.');
           } else if (state is LoadingSkillsState) {
             return const CircularProgressIndicator();
           } else if (state is LoadedSkillsState) {
