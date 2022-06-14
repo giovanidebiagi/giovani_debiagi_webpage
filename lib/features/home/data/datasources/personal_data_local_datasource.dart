@@ -1,6 +1,6 @@
 import '../../../../core/errors/exceptions/cache_exception.dart';
 import 'i_personal_data_local_datasource.dart';
-import '../personal_info_constants.dart';
+import '../../../../core/data/personal_info_constants.dart';
 import '../../domain/entities/personal_info.dart';
 import '../../domain/entities/skill.dart';
 

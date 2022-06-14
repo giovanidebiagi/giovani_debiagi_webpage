@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:giovani_debiagi_webpage/features/home/data/datasources/personal_data_local_datasource.dart';
-import 'package:giovani_debiagi_webpage/features/home/data/personal_info_constants.dart';
+import 'package:giovani_debiagi_webpage/core/data/personal_info_constants.dart';
 import 'package:giovani_debiagi_webpage/features/home/domain/entities/personal_info.dart';
 import 'package:giovani_debiagi_webpage/features/home/domain/entities/skill.dart';
 

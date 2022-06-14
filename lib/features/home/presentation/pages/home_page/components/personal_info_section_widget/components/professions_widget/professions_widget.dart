@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/features/home/data/personal_info_constants.dart';
+import 'package:giovani_debiagi_webpage/core/data/personal_info_constants.dart';
 
 import 'profession_widget.dart';
 

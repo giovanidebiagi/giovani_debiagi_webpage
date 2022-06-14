@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../../data/personal_info_constants.dart';
+import '../../../../../../../../../core/data/personal_info_constants.dart';
 import 'social_media_widget.dart';
 
 class SocialMediaRowWidget extends StatelessWidget {
