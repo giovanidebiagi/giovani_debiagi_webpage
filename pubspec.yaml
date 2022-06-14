@@ -80,6 +80,27 @@ flutter:
     - lib/features/home/data/assets/images/skills_icons/ros.png
     - lib/features/home/data/assets/images/skills_icons/solid_works.png
 
+    - lib/core/data/flutter_projects/images/jal_engenharia_app/1.png
+    - lib/core/data/flutter_projects/images/jal_engenharia_app/2.png
+    - lib/core/data/flutter_projects/images/jal_engenharia_app/3.png
+    - lib/core/data/flutter_projects/images/jal_engenharia_app/4.png
+    - lib/core/data/flutter_projects/images/tektura_funcionarios_app/1.jpeg
+    - lib/core/data/flutter_projects/images/tektura_funcionarios_app/2.jpeg
+    - lib/core/data/flutter_projects/images/tektura_funcionarios_app/3.jpeg
+    - lib/core/data/flutter_projects/images/tektura_funcionarios_app/4.jpeg
+    - lib/core/data/flutter_projects/images/keep_up_app/1.jpeg
+    - lib/core/data/flutter_projects/images/keep_up_app/2.jpeg
+    - lib/core/data/flutter_projects/images/keep_up_app/3.jpeg
+    - lib/core/data/flutter_projects/images/keep_up_app/4.jpeg
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/1.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/2.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/3.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/4.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/5.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/6.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/7.png
+    - lib/core/data/flutter_projects/images/tv_series_hub_app/8.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
