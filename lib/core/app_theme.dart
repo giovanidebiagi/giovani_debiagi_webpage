@@ -11,6 +11,7 @@ ThemeData buildTheme(brightness) {
       const TextTheme(
         bodyText2: TextStyle(
           color: AppColors.defaultTextColor,
+          height: 1.5,
         ),
       ),
     ),
