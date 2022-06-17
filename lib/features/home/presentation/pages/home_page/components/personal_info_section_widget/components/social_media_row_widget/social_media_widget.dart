@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../../../../../../core/app_colors.dart';
 
-class SocialMediaWidget extends StatelessWidget {
+class SocialMediaWidget extends StatefulWidget {
   const SocialMediaWidget(
       {Key? key, required this.imagePath, required this.url})
       : super(key: key);
@@ -12,16 +12,36 @@ class SocialMediaWidget extends StatelessWidget {
   final String url;
 
   @override
+  State<SocialMediaWidget> createState() => _SocialMediaWidgetState();
+}
+
+class _SocialMediaWidgetState extends State<SocialMediaWidget> {
+  bool _isHovered = false;
+
+  @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () async {
-        await launchUrlString(url);
+    return MouseRegion(
+      onHover: (value) {
+        setState(() {
+          _isHovered = true;
+        });
       },
-      child: Image.asset(
-        imagePath,
-        color: AppColors.defaultTextColor,
-        height: 32.0,
-        filterQuality: FilterQuality.medium,
+      onExit: (value) {
+        setState(() {
+          _isHovered = false;
+        });
+      },
+      child: InkWell(
+        onTap: () async {
+          await launchUrlString(widget.url);
+        },
+        child: Image.asset(
+          widget.imagePath,
+          color:
+              _isHovered ? AppColors.primaryColor : AppColors.defaultTextColor,
+          height: 32.0,
+          filterQuality: FilterQuality.medium,
+        ),
       ),
     );
   }
