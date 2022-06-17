@@ -6,11 +6,13 @@ class FlutterProjectModel extends FlutterProject {
   const FlutterProjectModel(
       {required String name,
       required String description,
-      List<String> projectImagesPaths = const []})
+      List<String> projectImagesPaths = const [],
+      String gitHubUrl = ''})
       : super(
             name: name,
             description: description,
-            projectImagesPaths: projectImagesPaths);
+            projectImagesPaths: projectImagesPaths,
+            gitHubUrl: gitHubUrl);
 
   factory FlutterProjectModel.fromJson(Map<String, dynamic> jsonMap) {
     final List<String> _projectsImagesPaths =
@@ -21,6 +23,7 @@ class FlutterProjectModel extends FlutterProject {
       name: jsonMap['name'],
       description: jsonMap['description'],
       projectImagesPaths: _projectsImagesPaths,
+      gitHubUrl: jsonMap['gitHubUrl'] ?? '',
     );
   }
 }

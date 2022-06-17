@@ -69,9 +69,9 @@ flutter:
     - lib/features/home/data/assets/images/giovani_profile_picture.png
     - lib/features/home/data/assets/images/profession_images/mechatronics_engineer.png
     - lib/features/home/data/assets/images/profession_images/flutter_developer.png
-    - lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png
-    - lib/features/home/data/assets/images/social_media_icons/github_icon.png
-    - lib/features/home/data/assets/images/social_media_icons/youtube_icon.png
+    - lib/core/data/assets/images/icons/social_media_icons/linkedin_icon.png
+    - lib/core/data/assets/images/icons/social_media_icons/github_icon.png
+    - lib/core/data/assets/images/icons/social_media_icons/youtube_icon.png
     - lib/features/home/data/assets/images/skills_icons/flutter.png
     - lib/features/home/data/assets/images/skills_icons/firebase.png
     - lib/features/home/data/assets/images/skills_icons/git.png

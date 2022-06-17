@@ -9,7 +9,7 @@ class FlutterProjectsConstants {
         "lib/core/data/flutter_projects/images/jal_engenharia_app/2.png",
         "lib/core/data/flutter_projects/images/jal_engenharia_app/3.png",
         "lib/core/data/flutter_projects/images/jal_engenharia_app/4.png",
-      ]
+      ],
     },
     {
       "name": "Tv Series Hub",
@@ -24,6 +24,18 @@ class FlutterProjectsConstants {
         "lib/core/data/flutter_projects/images/tv_series_hub_app/6.png",
         "lib/core/data/flutter_projects/images/tv_series_hub_app/7.png",
         "lib/core/data/flutter_projects/images/tv_series_hub_app/8.png",
+      ],
+      "gitHubUrl": "https://github.com/giovanidebiagi/tv_series_hub",
+    },
+    {
+      "name": "Keep Up App",
+      "description":
+          "KeepUp App provided tools for self-employed professionals such as Personal Trainers, Nutritionists, Coaches, Psychologists etc. to deliver content and tasks to their clients.\nClients were able to access content by using the app.",
+      "projectImagesPaths": [
+        "lib/core/data/flutter_projects/images/keep_up_app/1.jpeg",
+        "lib/core/data/flutter_projects/images/keep_up_app/2.jpeg",
+        "lib/core/data/flutter_projects/images/keep_up_app/3.jpeg",
+        "lib/core/data/flutter_projects/images/keep_up_app/4.jpeg",
       ]
     },
     {
@@ -37,16 +49,5 @@ class FlutterProjectsConstants {
         "lib/core/data/flutter_projects/images/tektura_funcionarios_app/4.jpeg",
       ],
     },
-    {
-      "name": "Keep Up App",
-      "description":
-          "KeepUp App provided tools for self-employed professionals such as Personal Trainers, Nutritionists, Coaches, Psychologists etc. to deliver content and tasks to their clients.\nClients were able to access content by using the app.",
-      "projectImagesPaths": [
-        "lib/core/data/flutter_projects/images/keep_up_app/1.jpeg",
-        "lib/core/data/flutter_projects/images/keep_up_app/2.jpeg",
-        "lib/core/data/flutter_projects/images/keep_up_app/3.jpeg",
-        "lib/core/data/flutter_projects/images/keep_up_app/4.jpeg",
-      ]
-    }
   ];
 }

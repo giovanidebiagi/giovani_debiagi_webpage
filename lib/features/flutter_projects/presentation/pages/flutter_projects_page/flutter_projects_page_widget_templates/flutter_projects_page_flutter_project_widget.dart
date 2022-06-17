@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:giovani_debiagi_webpage/core/size_constants.dart';
 import 'package:giovani_debiagi_webpage/core/text_styles.dart';
 import 'package:giovani_debiagi_webpage/features/flutter_projects/domain/entities/flutter_project.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
   const FlutterProjectsPageFlutterProjectWidget(
@@ -26,9 +27,36 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
                           .flutterProjectsHorizontalSpacingBetweenScreenshots,
               child: Column(
                 children: [
-                  Text(
-                    flutterProject.name,
-                    style: TextStyles.sectionTitleTextStyle,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        flutterProject.name,
+                        style: TextStyles.sectionTitleTextStyle,
+                      ),
+                      flutterProject.gitHubUrl != ''
+                          ? Row(
+                              children: [
+                                const SizedBox(width: 24.0),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: ElevatedButton(
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all(
+                                              Colors.black),
+                                    ),
+                                    onPressed: () async {
+                                      await launchUrlString(
+                                          flutterProject.gitHubUrl);
+                                    },
+                                    child: const Text('Avaliable on GitHub'),
+                                  ),
+                                ),
+                              ],
+                            )
+                          : const SizedBox.shrink()
+                    ],
                   ),
                   const SizedBox(
                       height: SizeConstants
@@ -50,6 +78,7 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
                             projectImagePath,
                             width:
                                 SizeConstants.flutterProjectsScreenshotsWidth,
+                            filterQuality: FilterQuality.medium,
                           ),
                         )
                         .toList(),
