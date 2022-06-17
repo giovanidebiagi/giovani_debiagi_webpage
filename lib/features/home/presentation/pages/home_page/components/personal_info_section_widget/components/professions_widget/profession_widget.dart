@@ -25,6 +25,7 @@ class ProfessionWidget extends StatelessWidget {
               height: 45,
               width: 45,
               color: AppColors.defaultTextColor,
+              filterQuality: FilterQuality.medium,
             ),
             Text(
               name,

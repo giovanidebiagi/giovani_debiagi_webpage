@@ -24,6 +24,7 @@ class SkillWidget extends StatelessWidget {
               height: 30,
               width: 30,
               color: AppColors.defaultTextColor,
+              filterQuality: FilterQuality.medium,
             ),
             Text(
               name,

@@ -21,6 +21,7 @@ class SocialMediaWidget extends StatelessWidget {
         imagePath,
         color: AppColors.defaultTextColor,
         height: 32.0,
+        filterQuality: FilterQuality.medium,
       ),
     );
   }

@@ -26,6 +26,7 @@ class ProjectsSectionProjectWidget extends StatelessWidget {
             height: 45,
             width: 45,
             color: AppColors.defaultTextColor,
+            filterQuality: FilterQuality.medium,
           ),
           const SizedBox(height: 18.0),
           Text(
