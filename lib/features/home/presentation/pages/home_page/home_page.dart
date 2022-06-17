@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
 import 'package:giovani_debiagi_webpage/features/home/presentation/pages/home_page/components/projects_section_widget/projects_section_widget.dart';
-
 import '../../../../../core/widgets/app_page_template/app_page_template.dart';
 import 'components/personal_info_section_widget/personal_info_section_widget.dart';
 import 'components/skills_section_widget/skills_section_widget.dart';
@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppPageTemplate(
+      currentPageRoute: AppRoutes.homePage,
       body: Column(children: const [
         PersonalInfoSectionWidget(),
         SkillsSectionWidget(),

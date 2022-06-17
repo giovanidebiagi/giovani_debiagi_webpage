@@ -42,16 +42,15 @@ class _FlutterProjectsListWidgetState extends State<FlutterProjectsListWidget> {
           } else if (state is LoadingFlutterProjectsState) {
             return const CircularProgressIndicator();
           } else if (state is LoadedFlutterProjectsState) {
-            return ListView.builder(
+            return ListView.separated(
+              separatorBuilder: (context, index) =>
+                  const SizedBox(height: 48.0),
               shrinkWrap: true,
               itemCount: state.flutterProjects.length,
               itemBuilder: (context, index) {
                 return FlutterProjectsPageFlutterProjectWidget(
-                  flutterProject: state.flutterProjects[index],
-                  color: index % 2 == 0
-                      ? AppColors.pageSecondaryBackgroundColor
-                      : AppColors.pagePrimaryBackgroundColor,
-                );
+                    flutterProject: state.flutterProjects[index],
+                    color: AppColors.pageSecondaryBackgroundColor);
               },
             );
           }

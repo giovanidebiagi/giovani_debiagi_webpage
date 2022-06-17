@@ -7,8 +7,9 @@ class SizeConstants {
   static const double spacingBetweenProjectTitleAndDescription = 24.0;
   static const double projectTitleAndDescriptionWidgetHorizontalPadding = 24.0;
 
-  static const double flutterProjectsScreenshotsWidth = 200;
+  static const double flutterProjectsScreenshotsWidth = 150;
   static const double flutterProjectsScreenshotsHeight = 400;
   static const double flutterProjectsHorizontalSpacingBetweenScreenshots = 12.0;
   static const double flutterProjectsVerticalSpacingBetweenScreenshots = 12.0;
+  static const double flutterProjectsDescriptionWidgetWidth = 300;
 }
