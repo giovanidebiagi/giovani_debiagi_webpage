@@ -29,11 +29,9 @@ void main() {
       List<MechatronicsProject>.generate(
     8,
     (index) => MechatronicsProject(
-      name: 'Flutter Project $index',
+      name: 'Mechatronics Project $index',
       description:
-          '''This app was developed for an engineering company based in Brazil.
-It allows company’s clients to access data and documents related to their contracted services.
-It also provides a tax simulator.''',
+          "Quadrotor Control by Teleoperation Using IMU is a project developed during my Mechatronics Engineering undegraduation.\nThe system consists of a Control Glove, a Decision Making Unit (Ubuntu Linux running ROS) and an Unmanned Aerial Vehicle.\nBy using it, the user is able to maneuver a drone vehicle with their hand movements.\n\nSupport: FAPESP (Process: 2016/04117-8)\nLabRom - EESC-USP",
       projectImagesPaths: _mechatronicsProjectsImagesPaths,
     ),
   );
