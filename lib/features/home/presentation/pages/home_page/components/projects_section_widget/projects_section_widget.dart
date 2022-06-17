@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:giovani_debiagi_webpage/core/app_colors.dart';
+import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
 import 'package:giovani_debiagi_webpage/core/size_constants.dart';
 import 'package:giovani_debiagi_webpage/core/text_styles.dart';
 import 'package:giovani_debiagi_webpage/features/home/presentation/pages/home_page/components/projects_section_widget/components/projects_section_project_widget.dart';
@@ -20,11 +21,13 @@ class ProjectsSectionWidget extends StatelessWidget {
           ProjectsSectionProjectWidget(
             name: 'Flutter',
             imagePath: PersonalInfoConstants.flutterImagePath,
+            pageRoute: AppRoutes.flutterProjects,
           ),
           SizedBox(height: 4.0),
           ProjectsSectionProjectWidget(
             name: 'Mechatronics',
             imagePath: PersonalInfoConstants.mechatronicsImagePath,
+            pageRoute: AppRoutes.mechatronicsProjects,
           ),
         ],
       ),
