@@ -34,13 +34,4 @@ I love multidisciplinary solutions and outside-the-box thinking.''';
     'SolidWorks':
         'lib/features/home/data/assets/images/skills_icons/solid_works.png',
   };
-
-  static const Map socialMedia = {
-    'LinkedIn':
-        'lib/features/home/data/assets/images/social_media_icons/linkedin_icon.png',
-    'GitHub':
-        'lib/features/home/data/assets/images/social_media_icons/github_icon.png',
-    'YouTube':
-        'lib/features/home/data/assets/images/social_media_icons/youtube_icon.png',
-  };
 }
