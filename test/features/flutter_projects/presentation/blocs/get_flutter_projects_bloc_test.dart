@@ -53,7 +53,7 @@ It also provides a tax simulator.''',
     // act
 
     // assert
-    expect(_getFlutterProjectsBloc.initialState, LoadingFlutterProjectsState());
+    expect(_getFlutterProjectsBloc.initialState, const LoadingFlutterProjectsState());
   });
 
   test('should call GetFlutterProjectsBloc call method', () async {
@@ -107,7 +107,7 @@ It also provides a tax simulator.''',
     // assert later
     expectLater(
       _getFlutterProjectsBloc.stream,
-      emits(LoadedFlutterProjectsState(flutterProjects: _flutterProjectsList)),
+      emits(const EmptyFlutterProjectsState()),
     );
 
     // act
