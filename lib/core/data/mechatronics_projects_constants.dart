@@ -9,6 +9,8 @@ class MechatronicsProjectsConstants {
         "lib/core/data/mechatronics_projects/images/qctimu/2.png",
         "lib/core/data/mechatronics_projects/images/qctimu/3.png",
       ],
+      "videosUrl":
+          "https://www.youtube.com/watch?v=Fp48DxE-20k&list=PLMFvLxnk4aiLag7BGHFrbJRXZ1Vu9WAT1",
     },
     {
       "name": "Wall Climbing Autonomous Robot",

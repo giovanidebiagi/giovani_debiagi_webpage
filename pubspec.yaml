@@ -100,6 +100,14 @@ flutter:
     - lib/core/data/flutter_projects/images/tv_series_hub_app/6.png
     - lib/core/data/flutter_projects/images/tv_series_hub_app/7.png
     - lib/core/data/flutter_projects/images/tv_series_hub_app/8.png
+    - lib/core/data/mechatronics_projects/images/qctimu/1.png
+    - lib/core/data/mechatronics_projects/images/qctimu/2.png
+    - lib/core/data/mechatronics_projects/images/qctimu/3.png
+    - lib/core/data/mechatronics_projects/images/wall_climbing_autonomous_robot/1.png
+    - lib/core/data/mechatronics_projects/images/wall_climbing_autonomous_robot/2.png
+    - lib/core/data/mechatronics_projects/images/wall_climbing_autonomous_robot/3.png
+
+
 
   #   - images/a_dot_ham.jpeg
 

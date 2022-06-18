@@ -6,21 +6,23 @@ class MechatronicsProjectModel extends MechatronicsProject {
   const MechatronicsProjectModel(
       {required String name,
       required String description,
-      required List<String> projectImagesPaths})
+      required List<String> projectImagesPaths,
+      String videosUrl = ''})
       : super(
             name: name,
             description: description,
-            projectImagesPaths: projectImagesPaths);
+            projectImagesPaths: projectImagesPaths,
+            videosUrl: videosUrl);
 
   factory MechatronicsProjectModel.fromJson(Map<String, dynamic> jsonMap) {
     final List<String> _projectsImagesPaths =
-        (jsonDecode(jsonEncode(jsonMap['projectImagesPaths'])) as List<dynamic>)
-            .cast<String>();
+        (jsonDecode(jsonEncode(jsonMap['projectImagesPaths'])) as List<dynamic>).cast<String>();
 
     return MechatronicsProjectModel(
       name: jsonMap['name'],
       description: jsonMap['description'],
       projectImagesPaths: _projectsImagesPaths,
+      videosUrl: jsonMap['videosUrl'] ?? '',
     );
   }
 }

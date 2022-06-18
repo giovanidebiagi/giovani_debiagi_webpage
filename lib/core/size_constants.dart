@@ -5,6 +5,7 @@ class SizeConstants {
   static const double defaultSectionInnerTopPadding = 64.0;
   static const double defaultSectionInnerBottomPadding = 64.0;
   static const double spacingBetweenProjectTitleAndDescription = 24.0;
+  static const double spacingBetweenProjectDescriptionAndBottomButton = 48.0;
   static const double projectTitleAndDescriptionWidgetHorizontalPadding = 24.0;
 
   static const double flutterProjectsScreenshotsWidth = 150;

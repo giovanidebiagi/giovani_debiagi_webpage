@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:giovani_debiagi_webpage/core/app_colors.dart';
 import 'package:giovani_debiagi_webpage/core/size_constants.dart';
 import 'package:giovani_debiagi_webpage/features/mechatronics_projects/domain/entities/mechatronics_project.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import '../../../../../../core/text_styles.dart';
 
 class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget {
@@ -34,11 +35,11 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
                       itemCount: mechatronicsProject.projectImagesPaths.length,
                       itemBuilder: (context, index) {
                         return Container(
+                          color: AppColors.pagePrimaryBackgroundColor,
                           height: SizeConstants.mechatronicsProjectVideoThumbnailHeight,
                           width: SizeConstants.mechatronicsProjectVideoThumbnailWidth,
-                          color: Colors.teal,
-                          child: const Center(
-                            child: Text('YouTube video here'),
+                          child: Image.asset(
+                            mechatronicsProject.projectImagesPaths[index],
                           ),
                         );
                       },
@@ -65,6 +66,19 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
                           mechatronicsProject.description,
                           textAlign: TextAlign.justify,
                         ),
+                        const SizedBox(
+                            height: SizeConstants.spacingBetweenProjectDescriptionAndBottomButton),
+                        mechatronicsProject.videosUrl != ''
+                            ? ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(Colors.red),
+                                ),
+                                onPressed: () async {
+                                  await launchUrlString(mechatronicsProject.videosUrl);
+                                },
+                                child: const Text('Watch on YouTube'),
+                              )
+                            : const SizedBox.shrink(),
                       ],
                     ),
                   )
