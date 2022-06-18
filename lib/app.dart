@@ -3,6 +3,7 @@ import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
 import 'package:giovani_debiagi_webpage/features/flutter_projects/presentation/pages/flutter_projects_page/flutter_projects_page.dart';
 import 'core/app_theme.dart';
 import 'features/home/presentation/pages/home_page/home_page.dart';
+import 'features/mechatronics_projects/presentation/pages/mechatronics_projects_page/mechatronics_projects_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -23,9 +24,9 @@ class App extends StatelessWidget {
             _page = const FlutterProjectsPage();
             break;
 
-          // case AppRoutes.mechatronicsProjects:
-          //   _page = const MechatronicsPage();
-          //   break;
+          case AppRoutes.mechatronicsProjects:
+            _page = const MechatronicsProjectsPage();
+            break;
         }
 
         if (_page != null) {
