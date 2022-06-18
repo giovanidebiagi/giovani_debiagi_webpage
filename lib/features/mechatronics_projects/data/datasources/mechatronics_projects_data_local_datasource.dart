@@ -5,8 +5,7 @@ import 'package:giovani_debiagi_webpage/features/mechatronics_projects/domain/en
 import '../../../../core/data/mechatronics_projects_constants.dart';
 import '../../../../core/errors/exceptions/cache_exception.dart';
 
-class MechatronicsProjectsDataLocalDatasource
-    implements IMechatronicsProjectsDataLocalDatasource {
+class MechatronicsProjectsDataLocalDatasource implements IMechatronicsProjectsDataLocalDatasource {
   @override
   Future<List<MechatronicsProject>> getMechatronicsProjects() async {
     try {

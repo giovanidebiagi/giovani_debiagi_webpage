@@ -7,28 +7,26 @@ import 'package:giovani_debiagi_webpage/features/flutter_projects/presentation/b
 import 'package:giovani_debiagi_webpage/features/flutter_projects/presentation/blocs/flutter_projects_states/loaded_flutter_projects_state.dart';
 import 'package:giovani_debiagi_webpage/features/flutter_projects/presentation/blocs/flutter_projects_states/loading_flutter_projects_state.dart';
 
-class GetFlutterProjectsBloc
-    extends Bloc<IGetFlutterProjectsEvent, IFlutterProjectsState> {
+class GetFlutterProjectsBloc extends Bloc<IGetFlutterProjectsEvent, IFlutterProjectsState> {
   final IFlutterProjectsState initialState;
   final GetFlutterProjects getFlutterBlocUsecase;
 
   GetFlutterProjectsBloc({
     required this.getFlutterBlocUsecase,
-    this.initialState = const EmptyFlutterProjectsState(),
+    this.initialState = const LoadingFlutterProjectsState(),
   }) : super(initialState) {
     on((event, emit) async {
-      emit(LoadingFlutterProjectsState());
-
       final _getFlutterProjects = await getFlutterBlocUsecase();
 
-      _getFlutterProjects.fold(
-        (l) {
-          emit(ErrorFlutterProjectsState());
-        },
-        (r) => emit(
-          LoadedFlutterProjectsState(flutterProjects: r),
-        ),
-      );
+      _getFlutterProjects.fold((l) {
+        emit(ErrorFlutterProjectsState());
+      }, (r) {
+        if (r.isNotEmpty) {
+          emit(LoadedFlutterProjectsState(flutterProjects: r));
+        } else {
+          emit(const EmptyFlutterProjectsState());
+        }
+      });
     });
   }
 }

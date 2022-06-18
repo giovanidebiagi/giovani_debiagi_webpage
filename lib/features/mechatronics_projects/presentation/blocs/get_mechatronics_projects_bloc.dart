@@ -15,21 +15,20 @@ class GetMechatronicsProjectsBloc
 
   GetMechatronicsProjectsBloc({
     required this.getMechatronicsBlocUsecase,
-    this.initialState = const EmptyMechatronicsProjectsState(),
+    this.initialState = const LoadingMechatronicsProjectsState(),
   }) : super(initialState) {
     on((event, emit) async {
-      emit(LoadingMechatronicsProjectsState());
-
       final _getMechatronicsProjects = await getMechatronicsBlocUsecase();
 
-      _getMechatronicsProjects.fold(
-        (l) {
-          emit(ErrorMechatronicsProjectsState());
-        },
-        (r) => emit(
-          LoadedMechatronicsProjectsState(mechatronicsProjects: r),
-        ),
-      );
+      _getMechatronicsProjects.fold((l) {
+        emit(ErrorMechatronicsProjectsState());
+      }, (r) {
+        if (r.isEmpty) {
+          emit(const EmptyMechatronicsProjectsState());
+        } else {
+          emit(LoadedMechatronicsProjectsState(mechatronicsProjects: r));
+        }
+      });
     });
   }
 }
