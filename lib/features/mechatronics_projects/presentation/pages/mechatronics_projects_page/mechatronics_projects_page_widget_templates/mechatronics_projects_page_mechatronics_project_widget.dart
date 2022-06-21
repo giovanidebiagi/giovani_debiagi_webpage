@@ -56,9 +56,12 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
                     width: SizeConstants.mechatronicsProjectsDescriptionWidgetWidth,
                     child: Column(
                       children: [
-                        Text(
-                          mechatronicsProject.name,
-                          style: TextStyles.sectionTitleTextStyle,
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            mechatronicsProject.name,
+                            style: TextStyles.sectionTitleTextStyle,
+                          ),
                         ),
                         const SizedBox(
                             height: SizeConstants.spacingBetweenProjectTitleAndDescription),
