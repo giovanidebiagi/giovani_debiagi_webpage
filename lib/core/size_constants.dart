@@ -19,4 +19,6 @@ class SizeConstants {
       mechatronicsProjectVideoThumbnailWidth * 9 / 16;
   static const double mechatronicsProjectsDescriptionWidgetWidth = 300;
   static const double verticalSpacingBetweenMechatronicsProjectsThumbnails = 12.0;
+
+  static const double appDrawerMenuButtonHeight = 40;
 }

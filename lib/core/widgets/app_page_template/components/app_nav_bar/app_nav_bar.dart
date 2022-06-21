@@ -6,39 +6,37 @@ import '../../../../app_colors.dart';
 
 class AppNavBar extends SliverAppBar {
   final String currentPageRoute;
+  final bool compressed;
 
-  AppNavBar({Key? key, required this.currentPageRoute})
+  AppNavBar({Key? key, required this.currentPageRoute, this.compressed = false})
       : super(
+          // automaticallyImplyLeading: compressed ? true : false,
           key: key,
           backgroundColor: AppColors.pageSecondaryBackgroundColor,
-          title: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 48.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                AppNavBarPageButton(
-                    title: 'About me',
-                    pageRoute: AppRoutes.homePage,
-                    currentPageRoute: currentPageRoute),
-                const SizedBox(width: 48),
-                AppNavBarPageButton(
-                    title: 'Flutter Projects',
-                    pageRoute: AppRoutes.flutterProjects,
-                    currentPageRoute: currentPageRoute),
-                const SizedBox(width: 48),
-                AppNavBarPageButton(
-                    title: 'Mechatronics Projects',
-                    pageRoute: AppRoutes.mechatronicsProjects,
-                    currentPageRoute: currentPageRoute),
-                const SizedBox(width: 48),
-                const SizedBox(width: 48.0),
-                Container(
-                  width: 200,
-                  height: kToolbarHeight,
-                  color: AppColors.pagePrimaryBackgroundColor,
-                )
-              ],
-            ),
-          ),
+          title: compressed
+              ? Container()
+              : Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 48.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      AppNavBarPageButton(
+                          title: 'About me',
+                          pageRoute: AppRoutes.homePage,
+                          currentPageRoute: currentPageRoute),
+                      const SizedBox(width: 48),
+                      AppNavBarPageButton(
+                          title: 'Flutter Projects',
+                          pageRoute: AppRoutes.flutterProjects,
+                          currentPageRoute: currentPageRoute),
+                      const SizedBox(width: 48),
+                      AppNavBarPageButton(
+                          title: 'Mechatronics Projects',
+                          pageRoute: AppRoutes.mechatronicsProjects,
+                          currentPageRoute: currentPageRoute),
+                      const SizedBox(width: 48),
+                    ],
+                  ),
+                ),
         );
 }
