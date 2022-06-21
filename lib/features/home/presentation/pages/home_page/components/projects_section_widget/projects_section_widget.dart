@@ -15,19 +15,29 @@ class ProjectsSectionWidget extends StatelessWidget {
     return HomePageSectionWidget(
       color: AppColors.pagePrimaryBackgroundColor,
       child: Column(
-        children: const [
-          Text('Projects', style: TextStyles.sectionTitleTextStyle),
-          SizedBox(height: SizeConstants.sectionSpacingBetweenTitleAndContent),
-          ProjectsSectionProjectWidget(
-            name: 'Flutter',
-            imagePath: PersonalInfoConstants.flutterImagePath,
-            pageRoute: AppRoutes.flutterProjects,
+        children: [
+          const Text('Projects', style: TextStyles.sectionTitleTextStyle),
+          const SizedBox(
+            height: SizeConstants.spacingBetweenProjectTitleAndDescription,
           ),
-          SizedBox(height: 4.0),
-          ProjectsSectionProjectWidget(
-            name: 'Mechatronics',
-            imagePath: PersonalInfoConstants.mechatronicsImagePath,
-            pageRoute: AppRoutes.mechatronicsProjects,
+          Row(
+            children: const [
+              Expanded(
+                child: ProjectsSectionProjectWidget(
+                  name: 'Flutter',
+                  imagePath: PersonalInfoConstants.flutterImagePath,
+                  pageRoute: AppRoutes.flutterProjects,
+                ),
+              ),
+              SizedBox(width: 4.0),
+              Expanded(
+                child: ProjectsSectionProjectWidget(
+                  name: 'Mechatronics',
+                  imagePath: PersonalInfoConstants.mechatronicsImagePath,
+                  pageRoute: AppRoutes.mechatronicsProjects,
+                ),
+              ),
+            ],
           ),
         ],
       ),
