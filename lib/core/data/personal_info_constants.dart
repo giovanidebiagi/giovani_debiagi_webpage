@@ -17,13 +17,18 @@ I love multidisciplinary solutions and outside-the-box thinking.''';
   static const String personalInfoProfilePicturePath =
       'lib/features/home/data/assets/images/giovani_profile_picture.png';
 
-  static const String mechatronicsImagePath =
+  static const String mechatronicsEngineerImagePath =
       'lib/features/home/data/assets/images/profession_images/mechatronics_engineer.png';
-  static const String flutterImagePath =
-      'lib/features/home/data/assets/images/skills_icons/flutter.png';
+  static const String flutterDeveloperImagePath =
+      'lib/features/home/data/assets/images/profession_images/flutter_developer.png';
+
+  static const String flutterProjectsImagePath =
+      'lib/features/home/data/assets/images/projects_images/flutter.png';
+  static const String mechatronicsProjectsImagePath =
+      'lib/features/home/data/assets/images/projects_images/mechatronics.png';
 
   static const Map skills = {
-    'Flutter': flutterImagePath,
+    'Flutter': 'lib/features/home/data/assets/images/skills_icons/flutter.png',
     'Firebase':
         'lib/features/home/data/assets/images/skills_icons/firebase.png',
     'Git': 'lib/features/home/data/assets/images/skills_icons/git.png',

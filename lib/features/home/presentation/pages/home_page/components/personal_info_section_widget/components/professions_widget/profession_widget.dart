@@ -24,7 +24,6 @@ class ProfessionWidget extends StatelessWidget {
               imagePath,
               height: 45,
               width: 45,
-              color: AppColors.defaultTextColor,
               filterQuality: FilterQuality.medium,
             ),
             Text(

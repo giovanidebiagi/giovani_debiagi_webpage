@@ -25,7 +25,7 @@ class ProjectsSectionWidget extends StatelessWidget {
               Expanded(
                 child: ProjectsSectionProjectWidget(
                   name: 'Flutter',
-                  imagePath: PersonalInfoConstants.flutterImagePath,
+                  imagePath: PersonalInfoConstants.flutterProjectsImagePath,
                   pageRoute: AppRoutes.flutterProjects,
                 ),
               ),
@@ -33,7 +33,8 @@ class ProjectsSectionWidget extends StatelessWidget {
               Expanded(
                 child: ProjectsSectionProjectWidget(
                   name: 'Mechatronics',
-                  imagePath: PersonalInfoConstants.mechatronicsImagePath,
+                  imagePath:
+                      PersonalInfoConstants.mechatronicsProjectsImagePath,
                   pageRoute: AppRoutes.mechatronicsProjects,
                 ),
               ),

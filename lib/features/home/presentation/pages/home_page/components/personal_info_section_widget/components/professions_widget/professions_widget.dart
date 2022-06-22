@@ -12,13 +12,13 @@ class ProfessionsWidget extends StatelessWidget {
       runSpacing: 12.0,
       children: const [
         ProfessionWidget(
-          PersonalInfoConstants.mechatronicsImagePath,
+          PersonalInfoConstants.mechatronicsEngineerImagePath,
           '''Mechatronics
 Engineer''',
         ),
         SizedBox(width: 24.0),
         ProfessionWidget(
-          PersonalInfoConstants.flutterImagePath,
+          PersonalInfoConstants.flutterDeveloperImagePath,
           '''Flutter
 Developer''',
         ),

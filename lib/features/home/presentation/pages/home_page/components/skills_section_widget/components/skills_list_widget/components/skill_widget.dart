@@ -23,7 +23,6 @@ class SkillWidget extends StatelessWidget {
               imagePath,
               height: 30,
               width: 30,
-              color: AppColors.defaultTextColor,
               filterQuality: FilterQuality.medium,
             ),
             Text(

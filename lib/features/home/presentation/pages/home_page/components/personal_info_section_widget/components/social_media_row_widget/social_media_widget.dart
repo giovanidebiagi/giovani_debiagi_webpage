@@ -37,8 +37,7 @@ class _SocialMediaWidgetState extends State<SocialMediaWidget> {
         },
         child: Image.asset(
           widget.imagePath,
-          color:
-              _isHovered ? AppColors.primaryColor : AppColors.defaultTextColor,
+          color: _isHovered ? AppColors.primaryColor : null,
           height: 32.0,
           filterQuality: FilterQuality.medium,
         ),

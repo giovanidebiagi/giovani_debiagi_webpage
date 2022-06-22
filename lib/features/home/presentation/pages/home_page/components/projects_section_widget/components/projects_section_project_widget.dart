@@ -3,7 +3,10 @@ import '../../../../../../../../core/app_colors.dart';
 
 class ProjectsSectionProjectWidget extends StatefulWidget {
   const ProjectsSectionProjectWidget(
-      {Key? key, required this.name, required this.imagePath, required this.pageRoute})
+      {Key? key,
+      required this.name,
+      required this.imagePath,
+      required this.pageRoute})
       : super(key: key);
 
   final String name;
@@ -11,10 +14,12 @@ class ProjectsSectionProjectWidget extends StatefulWidget {
   final String pageRoute;
 
   @override
-  State<ProjectsSectionProjectWidget> createState() => _ProjectsSectionProjectWidgetState();
+  State<ProjectsSectionProjectWidget> createState() =>
+      _ProjectsSectionProjectWidgetState();
 }
 
-class _ProjectsSectionProjectWidgetState extends State<ProjectsSectionProjectWidget> {
+class _ProjectsSectionProjectWidgetState
+    extends State<ProjectsSectionProjectWidget> {
   bool _isHovered = false;
 
   @override
@@ -43,7 +48,7 @@ class _ProjectsSectionProjectWidgetState extends State<ProjectsSectionProjectWid
               widget.imagePath,
               height: 45,
               width: 45,
-              color: _isHovered ? AppColors.primaryColor : AppColors.defaultTextColor,
+              color: _isHovered ? AppColors.primaryColor : null,
               filterQuality: FilterQuality.medium,
             ),
             const SizedBox(height: 18.0),
@@ -51,7 +56,9 @@ class _ProjectsSectionProjectWidgetState extends State<ProjectsSectionProjectWid
               widget.name,
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: _isHovered ? AppColors.primaryColor : AppColors.defaultTextColor,
+                color: _isHovered
+                    ? AppColors.primaryColor
+                    : AppColors.defaultTextColor,
               ),
             ),
           ]),
