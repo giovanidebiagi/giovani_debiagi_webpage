@@ -9,8 +9,8 @@ class SocialMediaRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      runSpacing: 16.0,
       children: [
         SocialMediaWidget(
           imagePath: SocialMediaIconsPaths.iconsPaths['LinkedIn'],
