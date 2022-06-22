@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "109687985072",
+    "project_id": "giovani-debiagi-website",
+    "storage_bucket": "giovani-debiagi-website.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109687985072:android:41413657499a48b6247c75",
+        "android_client_info": {
+          "package_name": "com.example.giovani_debiagi_webpage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109687985072-1v3397tig0v9ajaaogrd16admkf9caiv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1lx3UKWPLQDBXEpTcH5VBnWCoBgccFq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109687985072-1v3397tig0v9ajaaogrd16admkf9caiv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "109687985072-8jro7r22nvv44ncnm6nk2567srq4u21e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.giovaniDebiagiWebpage"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
