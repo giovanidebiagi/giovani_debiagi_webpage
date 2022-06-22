@@ -15,96 +15,97 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          color: color,
-          child: Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 48.0, horizontal: 48.0),
-            child: IntrinsicHeight(
-              child: SizedBox(
-                width: 4 * SizeConstants.flutterProjectsScreenshotsWidth +
-                    3 *
-                        SizeConstants
-                            .flutterProjectsHorizontalSpacingBetweenScreenshots +
-                    48.0 +
-                    SizeConstants.flutterProjectsDescriptionWidgetWidth,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Wrap(
-                        direction: Axis.horizontal,
-                        runSpacing: SizeConstants
-                            .flutterProjectsVerticalSpacingBetweenScreenshots,
-                        spacing: SizeConstants
-                            .flutterProjectsHorizontalSpacingBetweenScreenshots,
-                        children: flutterProject.projectImagesPaths
-                            .map(
-                              (projectImagePath) => Image.asset(
-                                projectImagePath,
-                                width: SizeConstants
-                                    .flutterProjectsScreenshotsWidth,
-                                filterQuality: FilterQuality.medium,
-                              ),
-                            )
-                            .toList(),
-                      ),
-                    ),
-                    const SizedBox(width: 48.0),
-                    SizedBox(
-                      width:
-                          SizeConstants.flutterProjectsDescriptionWidgetWidth,
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                flutterProject.name,
-                                style: TextStyles.sectionTitleTextStyle,
-                              ),
-                              flutterProject.gitHubUrl != ''
-                                  ? Row(
-                                      children: [
-                                        const SizedBox(width: 24.0),
-                                        MouseRegion(
-                                          cursor: SystemMouseCursors.click,
-                                          child: ElevatedButton(
-                                            style: ButtonStyle(
-                                              backgroundColor:
-                                                  MaterialStateProperty.all(
-                                                      AppColors.primaryColor),
-                                            ),
-                                            onPressed: () async {
-                                              await launchUrlString(
-                                                  flutterProject.gitHubUrl);
-                                            },
-                                            child: const Text(
-                                                'Avaliable on GitHub'),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  : const SizedBox.shrink(),
-                            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 48.0),
+      child: Container(
+        color: color,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 48.0, horizontal: 24.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Flexible(
+                flex: 2,
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    maxWidth: 4 * SizeConstants.flutterProjectsScreenshotsWidth +
+                        3 * SizeConstants.flutterProjectsHorizontalSpacingBetweenScreenshots +
+                        48.0,
+                  ),
+                  child: Wrap(
+                    direction: Axis.horizontal,
+                    runSpacing: SizeConstants.flutterProjectsVerticalSpacingBetweenScreenshots,
+                    spacing: SizeConstants.flutterProjectsHorizontalSpacingBetweenScreenshots,
+                    children: flutterProject.projectImagesPaths
+                        .map(
+                          (projectImagePath) => Image.asset(
+                            projectImagePath,
+                            width: SizeConstants.flutterProjectsScreenshotsWidth,
+                            filterQuality: FilterQuality.medium,
                           ),
-                          const SizedBox(
-                              height: SizeConstants
-                                  .spacingBetweenProjectTitleAndDescription),
-                          Text(
-                            flutterProject.description,
-                            textAlign: TextAlign.justify,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                        )
+                        .toList(),
+                  ),
                 ),
               ),
-            ),
+              const SizedBox(width: 24.0),
+              Flexible(
+                flex: 1,
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(minWidth: 300),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 24.0),
+                          child: Text(
+                            flutterProject.name,
+                            style: TextStyles.sectionTitleTextStyle,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                          height: SizeConstants.spacingBetweenProjectTitleAndDescription),
+                      Text(
+                        flutterProject.description,
+                        textAlign: TextAlign.justify,
+                      ),
+                      flutterProject.gitHubUrl != ''
+                          ? Column(
+                              children: [
+                                const SizedBox(
+                                  height:
+                                      SizeConstants.spacingBetweenProjectDescriptionAndBottomButton,
+                                ),
+                                MouseRegion(
+                                  cursor: SystemMouseCursors.click,
+                                  child: ElevatedButton(
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all(AppColors.primaryColor),
+                                    ),
+                                    onPressed: () async {
+                                      await launchUrlString(flutterProject.gitHubUrl);
+                                    },
+                                    child: const Padding(
+                                      padding: EdgeInsets.symmetric(vertical: 4.0),
+                                      child: Text('Avaliable on GitHub'),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          : const SizedBox.shrink(),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-      ],
+      ),
     );
     // return Column(
     //   children: [
