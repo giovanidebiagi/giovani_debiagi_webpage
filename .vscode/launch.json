@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "giovani_debiagi_webpage",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+               "--web-hostname", "0.0.0.0", "--web-port", "8080", "--web-renderer", "html"
+            ]
+        },
+        {
+            "name": "giovani_debiagi_webpage (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "giovani_debiagi_webpage (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
