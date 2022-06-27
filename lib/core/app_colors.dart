@@ -6,4 +6,5 @@ class AppColors {
   static const Color pageSecondaryBackgroundColor =
       Color.fromRGBO(31, 34, 53, 1);
   static const Color defaultTextColor = Color.fromRGBO(227, 227, 227, 1);
+  static const Color secondaryDefaultTextColor = pageSecondaryBackgroundColor;
 }
