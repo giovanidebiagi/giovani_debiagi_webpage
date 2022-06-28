@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:giovani_debiagi_webpage/features/mechatronics_projects/domain/entities/mechatronics_project.dart';
+import '../../domain/entities/mechatronics_project.dart';
 
 class MechatronicsProjectModel extends MechatronicsProject {
   const MechatronicsProjectModel(
@@ -16,7 +16,8 @@ class MechatronicsProjectModel extends MechatronicsProject {
 
   factory MechatronicsProjectModel.fromJson(Map<String, dynamic> jsonMap) {
     final List<String> _projectsImagesPaths =
-        (jsonDecode(jsonEncode(jsonMap['projectImagesPaths'])) as List<dynamic>).cast<String>();
+        (jsonDecode(jsonEncode(jsonMap['projectImagesPaths'])) as List<dynamic>)
+            .cast<String>();
 
     return MechatronicsProjectModel(
       name: jsonMap['name'],

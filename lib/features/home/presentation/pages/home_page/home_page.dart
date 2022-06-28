@@ -1,10 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/data/giovani_debiagi_webpage_project_constants.dart';
-import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
-import 'package:giovani_debiagi_webpage/core/size_constants.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/social_media_widget_templates/social_media_widget.dart';
-import 'package:giovani_debiagi_webpage/features/home/presentation/pages/home_page/components/projects_section_widget/projects_section_widget.dart';
+import '../../../../../core/data/giovani_debiagi_webpage_project_constants.dart';
+import '../../../../../core/routes/app_routes.dart';
+import '../../../../../core/size_constants.dart';
+import '../../../../../core/widgets/social_media_widget.dart';
+import 'components/projects_section_widget/projects_section_widget.dart';
 import '../../../../../core/app_colors.dart';
 import '../../../../../core/data/assets/images/icons/social_media_icons/social_media_icons_paths.dart';
 import '../../../../../core/widgets/app_page_template/app_page_template.dart';

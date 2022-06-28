@@ -1,12 +1,12 @@
 import 'package:get_it/get_it.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/data/datasources/flutter_projects_local_datasource.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/data/datasources/i_flutter_projects_data_local_datasource.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/data/repositories/flutter_projects_repository.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/domain/repositories/i_flutter_projects_repository.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/domain/usecases/get_flutter_projects.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/presentation/blocs/get_flutter_projects_bloc.dart';
-import 'package:giovani_debiagi_webpage/features/mechatronics_projects/data/datasources/i_mechatronics_projects_data_local_datasource.dart';
-import 'package:giovani_debiagi_webpage/features/mechatronics_projects/domain/usecases/get_mechatronics_projects.dart';
+import '../features/flutter_projects/data/datasources/flutter_projects_local_datasource.dart';
+import '../features/flutter_projects/data/datasources/i_flutter_projects_data_local_datasource.dart';
+import '../features/flutter_projects/data/repositories/flutter_projects_repository.dart';
+import '../features/flutter_projects/domain/repositories/i_flutter_projects_repository.dart';
+import '../features/flutter_projects/domain/usecases/get_flutter_projects.dart';
+import '../features/flutter_projects/presentation/blocs/get_flutter_projects_bloc.dart';
+import '../features/mechatronics_projects/data/datasources/i_mechatronics_projects_data_local_datasource.dart';
+import '../features/mechatronics_projects/domain/usecases/get_mechatronics_projects.dart';
 import '../features/home/data/datasources/i_personal_data_local_datasource.dart';
 import '../features/home/data/datasources/personal_data_local_datasource.dart';
 import '../features/home/data/repositories/personal_data_repository.dart';
@@ -24,7 +24,8 @@ final getIt = GetIt.instance;
 Future<void> init() async {
 //! Features
 // Datasources
-  getIt.registerLazySingleton<IPersonalDataLocalDatasource>(() => PersonalDataLocalDatasource());
+  getIt.registerLazySingleton<IPersonalDataLocalDatasource>(
+      () => PersonalDataLocalDatasource());
   getIt.registerLazySingleton<IFlutterProjectsDataLocalDatasource>(
       () => FlutterProjectsLocalDatasource());
   getIt.registerLazySingleton<IMechatronicsProjectsDataLocalDatasource>(
@@ -40,14 +41,17 @@ Future<void> init() async {
 
 // Usecases
   getIt.registerLazySingleton(() => GetSkills(repository: getIt()));
-  getIt.registerLazySingleton(() => GetFlutterProjects(flutterProjectsRepository: getIt()));
+  getIt.registerLazySingleton(
+      () => GetFlutterProjects(flutterProjectsRepository: getIt()));
   getIt.registerLazySingleton(
       () => GetMechatronicsProjects(mechatronicsProjectsRepository: getIt()));
 
 // BLoCs
   getIt.registerFactory(() => GetSkillsBloc(getSkillsUsecase: getIt()));
-  getIt.registerFactory(() => GetFlutterProjectsBloc(getFlutterBlocUsecase: getIt()));
-  getIt.registerFactory(() => GetMechatronicsProjectsBloc(getMechatronicsBlocUsecase: getIt()));
+  getIt.registerFactory(
+      () => GetFlutterProjectsBloc(getFlutterBlocUsecase: getIt()));
+  getIt.registerFactory(
+      () => GetMechatronicsProjectsBloc(getMechatronicsBlocUsecase: getIt()));
 
 //! External
 

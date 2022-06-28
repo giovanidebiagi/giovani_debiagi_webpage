@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'size_constants.dart';
 
 class TextStyles {

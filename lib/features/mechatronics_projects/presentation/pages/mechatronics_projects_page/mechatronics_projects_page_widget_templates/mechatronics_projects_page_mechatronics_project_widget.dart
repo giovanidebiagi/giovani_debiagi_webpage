@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
-import 'package:giovani_debiagi_webpage/core/size_constants.dart';
-import 'package:giovani_debiagi_webpage/features/mechatronics_projects/domain/entities/mechatronics_project.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import '../../../../../../core/text_styles.dart';
 
-class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget {
+import '../../../../../../core/app_colors.dart';
+import '../../../../../../core/size_constants.dart';
+import '../../../../../../core/text_styles.dart';
+import '../../../../domain/entities/mechatronics_project.dart';
+
+class MechatronicsProjectsPageMechatronicsProjectWidget
+    extends StatelessWidget {
   const MechatronicsProjectsPageMechatronicsProjectWidget(
       {Key? key, required this.mechatronicsProject})
       : super(key: key);
@@ -19,7 +21,8 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
         Container(
           color: AppColors.pageSecondaryBackgroundColor,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 48.0, horizontal: 48.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 48.0, horizontal: 48.0),
             child: SizedBox(
               width: SizeConstants.mechatronicsProjectVideoThumbnailWidth +
                   48 +
@@ -36,8 +39,10 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
                       itemBuilder: (context, index) {
                         return Container(
                           color: AppColors.pagePrimaryBackgroundColor,
-                          height: SizeConstants.mechatronicsProjectVideoThumbnailHeight,
-                          width: SizeConstants.mechatronicsProjectVideoThumbnailWidth,
+                          height: SizeConstants
+                              .mechatronicsProjectVideoThumbnailHeight,
+                          width: SizeConstants
+                              .mechatronicsProjectVideoThumbnailWidth,
                           child: Image.asset(
                             mechatronicsProject.projectImagesPaths[index],
                           ),
@@ -50,10 +55,13 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
                   ),
                   SizedBox(
                     height: mechatronicsProject.projectImagesPaths.length *
-                            SizeConstants.mechatronicsProjectVideoThumbnailHeight +
+                            SizeConstants
+                                .mechatronicsProjectVideoThumbnailHeight +
                         (mechatronicsProject.projectImagesPaths.length - 1) *
-                            SizeConstants.verticalSpacingBetweenMechatronicsProjectsThumbnails,
-                    width: SizeConstants.mechatronicsProjectsDescriptionWidgetWidth,
+                            SizeConstants
+                                .verticalSpacingBetweenMechatronicsProjectsThumbnails,
+                    width: SizeConstants
+                        .mechatronicsProjectsDescriptionWidgetWidth,
                     child: Column(
                       children: [
                         Align(
@@ -64,20 +72,24 @@ class MechatronicsProjectsPageMechatronicsProjectWidget extends StatelessWidget 
                           ),
                         ),
                         const SizedBox(
-                            height: SizeConstants.spacingBetweenProjectTitleAndDescription),
+                            height: SizeConstants
+                                .spacingBetweenProjectTitleAndDescription),
                         Text(
                           mechatronicsProject.description,
                           textAlign: TextAlign.justify,
                         ),
                         const SizedBox(
-                            height: SizeConstants.spacingBetweenProjectDescriptionAndBottomButton),
+                            height: SizeConstants
+                                .spacingBetweenProjectDescriptionAndBottomButton),
                         mechatronicsProject.videosUrl != ''
                             ? ElevatedButton(
                                 style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all(Colors.red),
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.red),
                                 ),
                                 onPressed: () async {
-                                  await launchUrlString(mechatronicsProject.videosUrl);
+                                  await launchUrlString(
+                                      mechatronicsProject.videosUrl);
                                 },
                                 child: const Text('Watch on YouTube'),
                               )

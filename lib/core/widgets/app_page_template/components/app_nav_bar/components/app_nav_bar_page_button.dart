@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
+import '../../../../../app_colors.dart';
 
 class AppNavBarPageButton extends StatefulWidget {
   const AppNavBarPageButton(

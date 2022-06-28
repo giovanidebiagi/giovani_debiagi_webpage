@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/size_constants.dart';
+
 import '../../../../../app_colors.dart';
+import '../../../../../size_constants.dart';
 
 class DrawerMenuButton extends StatefulWidget {
   const DrawerMenuButton(
-      {Key? key, required this.title, required this.pageRoute, required this.currentPageRoute})
+      {Key? key,
+      required this.title,
+      required this.pageRoute,
+      required this.currentPageRoute})
       : super(key: key);
 
   final String title;
@@ -41,9 +45,10 @@ class _DrawerMenuButtonState extends State<DrawerMenuButton> {
               widget.title,
               style: TextStyle(
                 fontSize: 14,
-                color: _isHovered || (widget.currentPageRoute == widget.pageRoute)
-                    ? AppColors.primaryColor
-                    : Colors.white,
+                color:
+                    _isHovered || (widget.currentPageRoute == widget.pageRoute)
+                        ? AppColors.primaryColor
+                        : Colors.white,
               ),
             ),
           ),

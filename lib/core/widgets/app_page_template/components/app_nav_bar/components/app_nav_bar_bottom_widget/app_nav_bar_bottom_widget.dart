@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/data/giovani_debiagi_webpage_project_constants.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/social_media_widget_templates/social_media_widget.dart';
+import '../../../../../../data/giovani_debiagi_webpage_project_constants.dart';
+import '../../../../../social_media_widget.dart';
 import '../../../../../../app_colors.dart';
 import '../../../../../../data/assets/images/icons/social_media_icons/social_media_icons_paths.dart';
 

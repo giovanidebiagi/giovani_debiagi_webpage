@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
-import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/app_page_template/app_page_template.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/presentation/pages/flutter_projects_page/components/flutter_projects_list_widget.dart';
+import '../../../../../core/app_colors.dart';
+import '../../../../../core/routes/app_routes.dart';
+import '../../../../../core/widgets/app_page_template/app_page_template.dart';
+import 'components/flutter_projects_list_widget.dart';
 
 class FlutterProjectsPage extends StatefulWidget {
   const FlutterProjectsPage({Key? key}) : super(key: key);

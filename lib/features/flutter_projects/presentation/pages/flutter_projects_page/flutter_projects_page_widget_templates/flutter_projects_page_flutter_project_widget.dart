@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
-import 'package:giovani_debiagi_webpage/core/size_constants.dart';
-import 'package:giovani_debiagi_webpage/core/text_styles.dart';
-import 'package:giovani_debiagi_webpage/features/flutter_projects/domain/entities/flutter_project.dart';
+import '../../../../../../core/app_colors.dart';
+import '../../../../../../core/size_constants.dart';
+import '../../../../../../core/text_styles.dart';
+import '../../../../domain/entities/flutter_project.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
@@ -29,19 +29,25 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
                 flex: 2,
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(
-                    maxWidth: 4 * SizeConstants.flutterProjectsScreenshotsWidth +
-                        3 * SizeConstants.flutterProjectsHorizontalSpacingBetweenScreenshots +
+                    maxWidth: 4 *
+                            SizeConstants.flutterProjectsScreenshotsWidth +
+                        3 *
+                            SizeConstants
+                                .flutterProjectsHorizontalSpacingBetweenScreenshots +
                         48.0,
                   ),
                   child: Wrap(
                     direction: Axis.horizontal,
-                    runSpacing: SizeConstants.flutterProjectsVerticalSpacingBetweenScreenshots,
-                    spacing: SizeConstants.flutterProjectsHorizontalSpacingBetweenScreenshots,
+                    runSpacing: SizeConstants
+                        .flutterProjectsVerticalSpacingBetweenScreenshots,
+                    spacing: SizeConstants
+                        .flutterProjectsHorizontalSpacingBetweenScreenshots,
                     children: flutterProject.projectImagesPaths
                         .map(
                           (projectImagePath) => Image.asset(
                             projectImagePath,
-                            width: SizeConstants.flutterProjectsScreenshotsWidth,
+                            width:
+                                SizeConstants.flutterProjectsScreenshotsWidth,
                             filterQuality: FilterQuality.medium,
                           ),
                         )
@@ -67,7 +73,8 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                          height: SizeConstants.spacingBetweenProjectTitleAndDescription),
+                          height: SizeConstants
+                              .spacingBetweenProjectTitleAndDescription),
                       Text(
                         flutterProject.description,
                         textAlign: TextAlign.justify,
@@ -76,21 +83,24 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
                           ? Column(
                               children: [
                                 const SizedBox(
-                                  height:
-                                      SizeConstants.spacingBetweenProjectDescriptionAndBottomButton,
+                                  height: SizeConstants
+                                      .spacingBetweenProjectDescriptionAndBottomButton,
                                 ),
                                 MouseRegion(
                                   cursor: SystemMouseCursors.click,
                                   child: ElevatedButton(
                                     style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all(AppColors.primaryColor),
+                                          MaterialStateProperty.all(
+                                              AppColors.primaryColor),
                                     ),
                                     onPressed: () async {
-                                      await launchUrlString(flutterProject.gitHubUrl);
+                                      await launchUrlString(
+                                          flutterProject.gitHubUrl);
                                     },
                                     child: const Padding(
-                                      padding: EdgeInsets.symmetric(vertical: 4.0),
+                                      padding:
+                                          EdgeInsets.symmetric(vertical: 4.0),
                                       child: Text('Avaliable on GitHub'),
                                     ),
                                   ),

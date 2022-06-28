@@ -1,9 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/data/giovani_debiagi_webpage_project_constants.dart';
-import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/app_page_template/components/app_nav_bar/components/app_nav_bar_bottom_widget/app_nav_bar_bottom_widget.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/app_page_template/components/app_nav_bar/components/app_nav_bar_page_button.dart';
+import '../../../../data/giovani_debiagi_webpage_project_constants.dart';
+import '../../../../routes/app_routes.dart';
+import 'components/app_nav_bar_bottom_widget/app_nav_bar_bottom_widget.dart';
+import 'components/app_nav_bar_page_button.dart';
 import '../../../../app_colors.dart';
 import '../../../../size_constants.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../../../../../core/size_constants.dart';
+
 import '../../../../../../../../core/data/personal_info_constants.dart';
+import '../../../../../../../../core/size_constants.dart';
 
 class AboutMeWidget extends StatelessWidget {
   const AboutMeWidget({Key? key}) : super(key: key);

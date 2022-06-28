@@ -5,7 +5,7 @@ import '../../../../../../../core/data/personal_info_constants.dart';
 import '../../home_page_widget_templates/home_page_section_widget.dart';
 import 'components/about_me_widget.dart';
 import 'components/professions_widget/professions_widget.dart';
-import 'components/social_media_row_widget/social_media_row_widget.dart';
+import 'components/social_media_row_widget.dart';
 
 class PersonalInfoSectionWidget extends StatelessWidget {
   const PersonalInfoSectionWidget({Key? key}) : super(key: key);

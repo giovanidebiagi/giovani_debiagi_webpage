@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/app_page_template/components/app_nav_bar/app_nav_bar.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/app_page_template/components/drawer_menu/drawer_menu.dart';
+import 'components/app_nav_bar/app_nav_bar.dart';
+import 'components/drawer_menu/drawer_menu.dart';
 import '../../app_colors.dart';
 
 class AppPageTemplate extends StatelessWidget {

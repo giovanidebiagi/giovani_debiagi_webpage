@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:giovani_debiagi_webpage/core/app_colors.dart';
-import 'package:giovani_debiagi_webpage/core/routes/app_routes.dart';
-import 'package:giovani_debiagi_webpage/core/widgets/app_page_template/components/drawer_menu/components/drawer_menu_button.dart';
+import '../../../../app_colors.dart';
+import '../../../../routes/app_routes.dart';
+import 'components/drawer_menu_button.dart';
 
 class DrawerMenu extends StatelessWidget {
-  const DrawerMenu({Key? key, required this.currentPageRoute}) : super(key: key);
+  const DrawerMenu({Key? key, required this.currentPageRoute})
+      : super(key: key);
 
   final String currentPageRoute;
 

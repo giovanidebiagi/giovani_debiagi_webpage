@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:giovani_debiagi_webpage/features/flutter_projects/domain/entities/flutter_project.dart';
+import '../../domain/entities/flutter_project.dart';
 
 class FlutterProjectModel extends FlutterProject {
   const FlutterProjectModel(

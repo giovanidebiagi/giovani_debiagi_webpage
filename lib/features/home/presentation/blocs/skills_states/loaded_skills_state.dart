@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'i_skills_state.dart';
 
 import '../../../domain/entities/skill.dart';
+import 'i_skills_state.dart';
 
 class LoadedSkillsState extends Equatable implements ISkillState {
   final List<Skill> skills;
