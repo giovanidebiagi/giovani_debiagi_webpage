@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../../../../core/routes/app_routes.dart';
 import '../../../../../core/widgets/app_page_template/app_page_template.dart';
 
-import '../../../../../core/app_colors.dart';
 import 'components/mechatronics_projects_list_widget.dart';
 
 class MechatronicsProjectsPage extends StatelessWidget {
@@ -10,20 +9,9 @@ class MechatronicsProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppPageTemplate(
-      body: Column(
-        children: const [
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 48),
-            child: Text(
-              'Mechatronics Projects',
-              style: TextStyle(fontSize: 24, color: AppColors.primaryColor),
-            ),
-          ),
-          MechatronicsProjectsListWidget(),
-        ],
-      ),
+    return const AppPageTemplate(
       currentPageRoute: AppRoutes.mechatronicsProjects,
+      body: MechatronicsProjectsListWidget(),
     );
   }
 }

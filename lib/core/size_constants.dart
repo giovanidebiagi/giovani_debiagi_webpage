@@ -14,11 +14,13 @@ class SizeConstants {
   static const double flutterProjectsVerticalSpacingBetweenScreenshots = 12.0;
   static const double flutterProjectsDescriptionWidgetWidth = 300;
 
-  static const double mechatronicsProjectVideoThumbnailWidth = 250;
+  static const double mechatronicsProjectVideoThumbnailWidth = 400;
   static const double mechatronicsProjectVideoThumbnailHeight =
       mechatronicsProjectVideoThumbnailWidth * 9 / 16;
   static const double mechatronicsProjectsDescriptionWidgetWidth = 300;
-  static const double verticalSpacingBetweenMechatronicsProjectsThumbnails =
+  static const double mechatronicsProjectsHorizontalSpacingBetweenThumbnails =
+      12.0;
+  static const double mechatronicsProjectsVerticaalSpacingBetweenThumbnails =
       12.0;
 
   static const double appDrawerMenuButtonHeight = 40;

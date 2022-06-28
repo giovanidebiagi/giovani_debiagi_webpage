@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../../core/app_colors.dart';
 import '../../../../../../core/injection_container.dart';
 import '../../../blocs/get_mechatronics_projects_bloc.dart';
 import '../../../blocs/mechatronics_projects_events/get_mechatronics_projects_event.dart';
@@ -44,14 +45,16 @@ class _MechatronicsProjectsListWidgetState
           } else if (state is LoadingMechatronicsProjectsState) {
             return const CircularProgressIndicator();
           } else if (state is LoadedMechatronicsProjectsState) {
-            return ListView.separated(
-              separatorBuilder: (context, index) =>
-                  const SizedBox(height: 48.0),
+            return ListView.builder(
               shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: state.mechatronicsProjects.length,
               itemBuilder: (context, index) {
                 return MechatronicsProjectsPageMechatronicsProjectWidget(
                   mechatronicsProject: state.mechatronicsProjects[index],
+                  color: index % 2 == 0
+                      ? AppColors.pagePrimaryBackgroundColor
+                      : AppColors.pageSecondaryBackgroundColor,
                 );
               },
             );

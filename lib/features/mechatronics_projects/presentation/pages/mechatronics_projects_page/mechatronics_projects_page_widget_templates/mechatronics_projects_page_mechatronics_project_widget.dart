@@ -9,100 +9,89 @@ import '../../../../domain/entities/mechatronics_project.dart';
 class MechatronicsProjectsPageMechatronicsProjectWidget
     extends StatelessWidget {
   const MechatronicsProjectsPageMechatronicsProjectWidget(
-      {Key? key, required this.mechatronicsProject})
+      {Key? key, required this.mechatronicsProject, required this.color})
       : super(key: key);
 
   final MechatronicsProject mechatronicsProject;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          color: AppColors.pagePrimaryBackgroundColor,
-          child: Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 48.0, horizontal: 48.0),
-            child: SizedBox(
-              width: SizeConstants.mechatronicsProjectVideoThumbnailWidth +
-                  48 +
-                  SizeConstants.mechatronicsProjectsDescriptionWidgetWidth,
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ListView.separated(
-                      separatorBuilder: (context, index) => const SizedBox(
-                        height: 12.0,
-                      ),
-                      shrinkWrap: true,
-                      itemCount: mechatronicsProject.projectImagesPaths.length,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          color: AppColors.pageSecondaryBackgroundColor,
-                          height: SizeConstants
-                              .mechatronicsProjectVideoThumbnailHeight,
-                          width: SizeConstants
-                              .mechatronicsProjectVideoThumbnailWidth,
-                          child: Image.asset(
-                            mechatronicsProject.projectImagesPaths[index],
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 48.0,
-                  ),
-                  SizedBox(
-                    height: mechatronicsProject.projectImagesPaths.length *
-                            SizeConstants
-                                .mechatronicsProjectVideoThumbnailHeight +
-                        (mechatronicsProject.projectImagesPaths.length - 1) *
-                            SizeConstants
-                                .verticalSpacingBetweenMechatronicsProjectsThumbnails,
-                    width: SizeConstants
-                        .mechatronicsProjectsDescriptionWidgetWidth,
-                    child: Column(
-                      children: [
-                        Align(
-                          alignment: Alignment.topLeft,
-                          child: Text(
-                            mechatronicsProject.name,
-                            style: TextStyles.sectionTitleTextStyle,
-                          ),
-                        ),
-                        const SizedBox(
-                            height: SizeConstants
-                                .spacingBetweenProjectTitleAndDescription),
-                        Text(
-                          mechatronicsProject.description,
-                          textAlign: TextAlign.justify,
-                        ),
-                        const SizedBox(
-                            height: SizeConstants
-                                .spacingBetweenProjectDescriptionAndBottomButton),
-                        mechatronicsProject.videosUrl != ''
-                            ? ElevatedButton(
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.red),
-                                ),
-                                onPressed: () async {
-                                  await launchUrlString(
-                                      mechatronicsProject.videosUrl);
-                                },
-                                child: const Text('Watch on YouTube'),
-                              )
-                            : const SizedBox.shrink(),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+    return Container(
+      color: color,
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 48.0,
+          bottom: 56.0,
+          left: 24.0,
+          right: 24.0,
         ),
-      ],
+        child: Column(
+          children: [
+            Text(
+              mechatronicsProject.name,
+              style: TextStyles.sectionTitleTextStyle,
+            ),
+            const SizedBox(
+                height: SizeConstants.spacingBetweenProjectTitleAndDescription),
+            Text(
+              mechatronicsProject.description,
+              textAlign: TextAlign.center,
+            ),
+            mechatronicsProject.videosUrl != ''
+                ? Column(
+                    children: [
+                      const SizedBox(
+                        height: 24.0,
+                      ),
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.red),
+                          ),
+                          onPressed: () async {
+                            await launchUrlString(
+                                mechatronicsProject.videosUrl);
+                          },
+                          child: const Text('Watch on YouTube'),
+                        ),
+                      ),
+                    ],
+                  )
+                : const SizedBox.shrink(),
+            const SizedBox(height: 48.0),
+            Wrap(
+              alignment: WrapAlignment.center,
+              direction: Axis.horizontal,
+              runSpacing: SizeConstants
+                  .mechatronicsProjectsVerticaalSpacingBetweenThumbnails,
+              spacing: SizeConstants
+                  .mechatronicsProjectsHorizontalSpacingBetweenThumbnails,
+              children: mechatronicsProject.projectImagesPaths
+                  .map(
+                    (projectImagePath) => Image.asset(projectImagePath,
+                        width: SizeConstants
+                            .mechatronicsProjectVideoThumbnailWidth,
+                        filterQuality: FilterQuality.medium),
+                  )
+                  .toList(),
+
+              // (context, index) {
+              //   return Container(
+              //     color: AppColors.pageSecondaryBackgroundColor,
+              //     height: SizeConstants.mechatronicsProjectVideoThumbnailHeight,
+              //     width: SizeConstants.mechatronicsProjectVideoThumbnailWidth,
+              //     child: Image.asset(
+              //       mechatronicsProject.projectImagesPaths[index],
+              //     ),
+              //   );
+              // },
+            )
+          ],
+        ),
+      ),
     );
   }
 }
