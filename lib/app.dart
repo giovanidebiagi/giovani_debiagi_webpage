@@ -11,6 +11,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Giovani Debiagi Portfolio',
       theme: buildTheme(Brightness.dark),
       onGenerateRoute: (settings) {
         Widget? _page;
