@@ -1,6 +1,4 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import '../../../../data/giovani_debiagi_webpage_project_constants.dart';
 import '../../../../routes/app_routes.dart';
 import 'components/app_nav_bar_bottom_widget/app_nav_bar_bottom_widget.dart';
 import 'components/app_nav_bar_page_button.dart';
