@@ -43,19 +43,23 @@ class _SkillsListWidgetState extends State<SkillsListWidget> {
           } else if (state is LoadedSkillsState) {
             return SizedBox(
               width: double.infinity,
-              child: Wrap(
-                spacing: 12.0,
-                children: state.skills
-                    .map(
-                      (skill) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6.0),
-                        child: SkillWidget(
-                          imagePath: skill.skillIconAssetPath,
-                          name: skill.name,
-                        ),
-                      ),
-                    )
-                    .toList(),
+              child: Column(
+                children: [
+                  Wrap(
+                    spacing: 12.0,
+                    children: state.skills
+                        .map(
+                          (skill) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 6.0),
+                            child: SkillWidget(
+                              imagePath: skill.skillIconAssetPath,
+                              name: skill.name,
+                            ),
+                          ),
+                        )
+                        .toList(),
+                  ),
+                ],
               ),
             );
           }
