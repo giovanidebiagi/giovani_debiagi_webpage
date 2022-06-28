@@ -40,7 +40,7 @@ class _ProjectsSectionProjectWidgetState
           Navigator.pushNamed(context, widget.pageRoute);
         },
         child: Container(
-          color: AppColors.pageSecondaryBackgroundColor,
+          color: AppColors.pagePrimaryBackgroundColor,
           // width: double.infinity,
           height: 300.0,
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [

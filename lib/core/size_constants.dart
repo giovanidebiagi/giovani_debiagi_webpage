@@ -18,7 +18,12 @@ class SizeConstants {
   static const double mechatronicsProjectVideoThumbnailHeight =
       mechatronicsProjectVideoThumbnailWidth * 9 / 16;
   static const double mechatronicsProjectsDescriptionWidgetWidth = 300;
-  static const double verticalSpacingBetweenMechatronicsProjectsThumbnails = 12.0;
+  static const double verticalSpacingBetweenMechatronicsProjectsThumbnails =
+      12.0;
 
   static const double appDrawerMenuButtonHeight = 40;
+
+  static const double smartphoneMaxWidth = 480;
+  static const double lowResolutionTabletMaxWidth = 767;
+  static const double tabletMaxWidth = 1024;
 }
