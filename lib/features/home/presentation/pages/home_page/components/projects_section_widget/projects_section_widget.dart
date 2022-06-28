@@ -13,7 +13,7 @@ class ProjectsSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HomePageSectionWidget(
-      color: AppColors.pageSecondaryBackgroundColor,
+      color: AppColors.pagePrimaryBackgroundColor,
       child: Column(
         children: [
           const Text('Projects', style: TextStyles.sectionTitleTextStyle),

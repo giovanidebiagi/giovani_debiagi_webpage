@@ -30,12 +30,12 @@ class _AppNavBarPageButtonState extends State<AppNavBarPageButton>
       onEnter: (_) => onEntered(true),
       onExit: (_) => onEntered(false),
       child: InkWell(
-        hoverColor: AppColors.pageSecondaryBackgroundColor,
+        hoverColor: AppColors.pagePrimaryBackgroundColor,
         onTap: () {
           Navigator.pushNamed(context, widget.pageRoute);
         },
         child: AnimatedContainer(
-          color: AppColors.pageSecondaryBackgroundColor,
+          color: AppColors.pagePrimaryBackgroundColor,
           duration: const Duration(milliseconds: 150),
           transform: _isHovered ? _translate : _dontTranslate,
           child: Text(

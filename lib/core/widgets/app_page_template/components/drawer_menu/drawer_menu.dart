@@ -12,7 +12,7 @@ class DrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColors.pageSecondaryBackgroundColor,
+      backgroundColor: AppColors.pagePrimaryBackgroundColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: ListView(

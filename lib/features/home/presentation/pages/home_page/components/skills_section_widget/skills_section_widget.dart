@@ -11,7 +11,7 @@ class SkillsSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HomePageSectionWidget(
-      color: AppColors.pagePrimaryBackgroundColor,
+      color: AppColors.pageSecondaryBackgroundColor,
       child: Column(
         children: const [
           Text(

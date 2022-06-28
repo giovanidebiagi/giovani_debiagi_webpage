@@ -13,7 +13,7 @@ class PersonalInfoSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HomePageSectionWidget(
-      color: AppColors.pageSecondaryBackgroundColor,
+      color: AppColors.pagePrimaryBackgroundColor,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,

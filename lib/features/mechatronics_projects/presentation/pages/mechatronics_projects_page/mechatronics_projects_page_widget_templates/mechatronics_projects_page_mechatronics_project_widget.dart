@@ -19,7 +19,7 @@ class MechatronicsProjectsPageMechatronicsProjectWidget
     return Column(
       children: [
         Container(
-          color: AppColors.pageSecondaryBackgroundColor,
+          color: AppColors.pagePrimaryBackgroundColor,
           child: Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 48.0, horizontal: 48.0),
@@ -38,7 +38,7 @@ class MechatronicsProjectsPageMechatronicsProjectWidget
                       itemCount: mechatronicsProject.projectImagesPaths.length,
                       itemBuilder: (context, index) {
                         return Container(
-                          color: AppColors.pagePrimaryBackgroundColor,
+                          color: AppColors.pageSecondaryBackgroundColor,
                           height: SizeConstants
                               .mechatronicsProjectVideoThumbnailHeight,
                           width: SizeConstants

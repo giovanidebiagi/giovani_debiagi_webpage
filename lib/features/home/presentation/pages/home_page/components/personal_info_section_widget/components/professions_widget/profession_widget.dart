@@ -12,7 +12,7 @@ class ProfessionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.pagePrimaryBackgroundColor,
+      color: AppColors.pageSecondaryBackgroundColor,
       height: 120.0,
       width: 120.0,
       child: Padding(

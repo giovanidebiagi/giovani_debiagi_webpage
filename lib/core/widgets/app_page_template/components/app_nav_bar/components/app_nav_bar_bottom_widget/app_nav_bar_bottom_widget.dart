@@ -11,7 +11,7 @@ class AppNavBarBottomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.pagePrimaryBackgroundColor,
+      color: AppColors.pageSecondaryBackgroundColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 96.0, vertical: 4.0),
         child: Row(
@@ -31,6 +31,7 @@ class AppNavBarBottomWidget extends StatelessWidget {
             SocialMediaWidget(
               imagePath: SocialMediaIconsPaths.iconsPaths['GitHub'],
               url: GiovaniDebiagiWebpageProjectConstants.projectGitHubUrl,
+              width: 24,
             ),
           ],
         ),

@@ -14,7 +14,7 @@ class SkillWidget extends StatelessWidget {
     return Container(
       height: 120.0,
       width: 120.0,
-      color: AppColors.pageSecondaryBackgroundColor,
+      color: AppColors.pagePrimaryBackgroundColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
