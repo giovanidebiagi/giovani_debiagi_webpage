@@ -16,11 +16,6 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: flutterProject.projectImagesPaths.length *
-              SizeConstants.flutterProjectsScreenshotsWidth +
-          SizeConstants.flutterProjectsHorizontalSpacingBetweenScreenshots *
-              (flutterProject.projectImagesPaths.length - 1) +
-          2 * 24,
       color: color,
       child: Padding(
         padding: const EdgeInsets.only(
@@ -57,10 +52,7 @@ class FlutterProjectsPageFlutterProjectWidget extends StatelessWidget {
                           onPressed: () async {
                             await launchUrlString(flutterProject.gitHubUrl);
                           },
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 4.0),
-                            child: Text('Avaliable on GitHub'),
-                          ),
+                          child: const Text('Avaliable on GitHub'),
                         ),
                       ),
                     ],
