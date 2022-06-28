@@ -22,32 +22,39 @@ class HomePage extends StatelessWidget {
       currentPageRoute: AppRoutes.homePage,
       body: Column(children: [
         _screenWidth < SizeConstants.tabletMaxWidth
-            ? Container(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
-                color: AppColors.pagePrimaryBackgroundColor,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    AnimatedTextKit(
-                      animatedTexts: [
-                        TyperAnimatedText(
-                          GiovaniDebiagiWebpageProjectConstants
-                              .bottomNavBarText,
-                          textStyle:
-                              const TextStyle(color: AppColors.primaryColor),
-                        )
-                      ],
-                      pause: const Duration(seconds: 4),
-                      repeatForever: true,
+            ? Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      color: AppColors.pageSecondaryBackgroundColor,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          AnimatedTextKit(
+                            animatedTexts: [
+                              TyperAnimatedText(
+                                GiovaniDebiagiWebpageProjectConstants
+                                    .bottomNavBarText,
+                                textStyle: const TextStyle(
+                                    color: AppColors.primaryColor),
+                              )
+                            ],
+                            pause: const Duration(seconds: 4),
+                            repeatForever: true,
+                          ),
+                          const SizedBox(height: 8.0),
+                          SocialMediaWidget(
+                            imagePath:
+                                SocialMediaIconsPaths.iconsPaths['GitHub'],
+                            url: GiovaniDebiagiWebpageProjectConstants
+                                .projectGitHubUrl,
+                          ),
+                        ],
+                      ),
                     ),
-                    const SizedBox(height: 8.0),
-                    SocialMediaWidget(
-                      imagePath: SocialMediaIconsPaths.iconsPaths['GitHub'],
-                      url: GiovaniDebiagiWebpageProjectConstants
-                          .projectGitHubUrl,
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               )
             : const SizedBox.shrink(),
         const PersonalInfoSectionWidget(),
