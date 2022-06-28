@@ -21,9 +21,21 @@ class _AppNavBarState extends State<AppNavBar> with TickerProviderStateMixin {
 
     return SliverAppBar(
       key: widget.key,
-      backgroundColor: AppColors.pageSecondaryBackgroundColor,
+      backgroundColor: _screenWidth < SizeConstants.tabletMaxWidth
+          ? AppColors.pageSecondaryBackgroundColor
+          : AppColors.pagePrimaryBackgroundColor,
       title: _screenWidth < SizeConstants.tabletMaxWidth
-          ? const SizedBox.shrink()
+          ? Text(
+              widget.currentPageRoute == AppRoutes.homePage
+                  ? 'Home'
+                  : widget.currentPageRoute == AppRoutes.flutterProjects
+                      ? 'Flutter Projects'
+                      : widget.currentPageRoute ==
+                              AppRoutes.mechatronicsProjects
+                          ? 'Mechatronics Projects'
+                          : '',
+              style: const TextStyle(fontSize: 16),
+            )
           : Padding(
               padding: const EdgeInsets.symmetric(horizontal: 48.0),
               child: Row(
