@@ -14,20 +14,9 @@ class FlutterProjectsPage extends StatefulWidget {
 class _FlutterProjectsPageState extends State<FlutterProjectsPage> {
   @override
   Widget build(BuildContext context) {
-    return AppPageTemplate(
+    return const AppPageTemplate(
       currentPageRoute: AppRoutes.flutterProjects,
-      body: Column(
-        children: const [
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 48),
-            child: Text(
-              'Flutter Projects',
-              style: TextStyle(fontSize: 24, color: AppColors.primaryColor),
-            ),
-          ),
-          FlutterProjectsListWidget(),
-        ],
-      ),
+      body: FlutterProjectsListWidget(),
     );
   }
 }
