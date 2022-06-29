@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:giovani_debiagi_webpage/core/size_constants.dart';
 import '../../../../../../blocs/skills_states/error_skills_state.dart';
 import '../../../../../../../../../core/injection_container.dart';
 import '../../../../../../blocs/get_skills_bloc.dart';
@@ -30,6 +31,8 @@ class _SkillsListWidgetState extends State<SkillsListWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final double _screenWidth = MediaQuery.of(context).size.width;
+
     return BlocProvider(
       create: (context) => _bloc,
       child: BlocBuilder<GetSkillsBloc, ISkillState>(
@@ -43,24 +46,39 @@ class _SkillsListWidgetState extends State<SkillsListWidget> {
           } else if (state is LoadedSkillsState) {
             return SizedBox(
               width: double.infinity,
-              child: Column(
-                children: [
-                  Wrap(
-                    spacing: 12.0,
-                    children: state.skills
-                        .map(
-                          (skill) => Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 6.0),
-                            child: SkillWidget(
-                              imagePath: skill.skillIconAssetPath,
-                              name: skill.name,
+              child: _screenWidth < SizeConstants.tabletMaxWidth
+                  ? Column(children: [
+                      Wrap(
+                        spacing: 12.0,
+                        children: state.skills
+                            .map(
+                              (skill) => Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 6.0),
+                                child: SkillWidget(
+                                  imagePath: skill.skillIconAssetPath,
+                                  name: skill.name,
+                                ),
+                              ),
+                            )
+                            .toList(),
+                      )
+                    ])
+                  : Wrap(
+                      spacing: 12.0,
+                      children: state.skills
+                          .map(
+                            (skill) => Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 6.0),
+                              child: SkillWidget(
+                                imagePath: skill.skillIconAssetPath,
+                                name: skill.name,
+                              ),
                             ),
-                          ),
-                        )
-                        .toList(),
-                  ),
-                ],
-              ),
+                          )
+                          .toList(),
+                    ),
             );
           }
           return Container();
